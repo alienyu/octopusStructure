@@ -1,0 +1,89 @@
+{
+  "status": 200,
+  "errMsg": "dgfd",
+  "data": {
+    "current": 4,
+    "total": 262,
+    "list": [{
+      "roleId": 1,
+      "key": 1,
+      "loginName": "admin",
+      "name": "胡彦sff斌",
+      "status": "0",
+      "mobile": "13918911123",
+      "updateTime": "2017-09-11 11:11:11"
+    }, {
+      "roleId": 2,
+      "key": 2,
+      "loginName": "yuyongjian",
+      "name": "於永健",
+      "status": "1",
+      "mobile": "12312312312",
+      "updateTime": "2017-09-08 12:12:15"
+    },{
+      "roleId": 3,
+      "key": 3,
+      "loginName": "liuguozhu",
+      "name": "刘国柱",
+      "status": "0",
+      "mobile": "214354365435",
+      "updateTime": "2017-07-13 07:11:11"
+    },{
+      "roleId": 4,
+      "key": 4,
+      "loginName": "liuguozhu",
+      "name": "刘国柱",
+      "status": "0",
+      "mobile": "214354365435",
+      "updateTime": "2017-07-13 07:11:11"
+    },{
+      "roleId": 4,
+      "key": 5,
+      "loginName": "liuguozhu",
+      "name": "刘国柱",
+      "status": "0",
+      "mobile": "214354365435",
+      "updateTime": "2017-07-13 07:11:11"
+    },{
+      "roleId": 4,
+      "key": 6,
+      "loginName": "liuguozhu",
+      "name": "刘国柱",
+      "status": "0",
+      "mobile": "214354365435",
+      "updateTime": "2017-07-13 07:11:11"
+    },{
+      "roleId": 4,
+      "key": 7,
+      "loginName": "liuguozhu",
+      "name": "刘国柱",
+      "status": "0",
+      "mobile": "214354365435",
+      "updateTime": "2017-07-13 07:11:11"
+    },{
+      "roleId": 4,
+      "key": 8,
+      "loginName": "liuguozhu",
+      "name": "刘国柱",
+      "status": "0",
+      "mobile": "214354365435",
+      "updateTime": "2017-07-13 07:11:11"
+    },{
+      "roleId": 4,
+      "key": 9,
+      "loginName": "liuguozhu",
+      "name": "刘国柱",
+      "status": "0",
+      "mobile": "214354365435",
+      "updateTime": "2017-07-13 07:11:11"
+    },{
+      "roleId": 4,
+      "key": 10,
+      "loginName": "liuguozhu",
+      "name": "刘国柱",
+      "status": "0",
+      "mobile": "214354365435",
+      "updateTime": "2017-07-13 07:11:11"
+    }]
+  }
+}

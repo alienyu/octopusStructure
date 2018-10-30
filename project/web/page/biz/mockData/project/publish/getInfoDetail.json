@@ -1,0 +1,340 @@
+{
+  "status": 200,
+  "errMsg": "dgfd",
+  "data": {
+    "assetsType": {
+      "debts": [
+        {
+          "value": "开发商项目",
+          "key": "1"
+        },
+        {
+          "value": "企业项目",
+          "key": "2"
+        },
+        {
+          "value": "风头项目",
+          "key": "3"
+        }
+      ],
+      "stock": [
+        {
+          "value": "种子期(创意期)",
+          "key": "1"
+        },
+        {
+          "value": "初创期",
+          "key": "2"
+        },
+        {
+          "value": "成长期",
+          "key": "3"
+        },
+        {
+          "value": "成熟期(pre-ipo)",
+          "key": "4"
+        }
+      ],
+      "assets": [
+        {
+          "value": "开发商",
+          "key": "1"
+        },
+        {
+          "value": "企业项目",
+          "key": "2"
+        },
+        {
+          "value": "风头项目",
+          "key": "3"
+        }
+      ]
+    },
+    "industryList": [
+      {
+        "value": "市政公用",
+        "key": "1"
+      },
+      {
+        "value": "房地产",
+        "key": "2"
+      },
+      {
+        "value": "教育培训",
+        "key": "3"
+      },
+      {
+        "value": "石油燃气",
+        "key": "4"
+      },
+      {
+        "value": "煤炭业",
+        "key": "5"
+      },
+      {
+        "value": "化工化纤",
+        "key": "6"
+      },
+      {
+        "value": "化肥农药",
+        "key": "7"
+      },
+      {
+        "value": "建材",
+        "key": "8"
+      },
+      {
+        "value": "有色金属",
+        "key": "9"
+      },
+      {
+        "value": "建筑工程",
+        "key": "10"
+      },
+      {
+        "value": "钢铁",
+        "key": "11"
+      },
+      {
+        "value": "造纸印刷",
+        "key": "12"
+      },
+      {
+        "value": "电器设备",
+        "key": "13"
+      },
+      {
+        "value": "机械设备",
+        "key": "14"
+      },
+      {
+        "value": "贸易服务",
+        "key": "15"
+      },
+      {
+        "value": "运输物流",
+        "key": "16"
+      },
+      {
+        "value": "汽配",
+        "key": "17"
+      },
+      {
+        "value": "家电",
+        "key": "18"
+      },
+      {
+        "value": "日用品",
+        "key": "19"
+      },
+      {
+        "value": "纺织服装",
+        "key": "20"
+      },
+      {
+        "value": "旅游酒店",
+        "key": "21"
+      },
+      {
+        "value": "餐饮娱乐",
+        "key": "22"
+      },
+      {
+        "value": "文化传媒",
+        "key": "23"
+      },
+      {
+        "value": "零售连锁",
+        "key": "24"
+      },
+      {
+        "value": "食品饮料",
+        "key": "25"
+      },
+      {
+        "value": "酿酒造酒",
+        "key": "26"
+      },
+      {
+        "value": "农业",
+        "key": "27"
+      },
+      {
+        "value": "医药生物",
+        "key": "28"
+      },
+      {
+        "value": "银行",
+        "key": "29"
+      },
+      {
+        "value": "信托",
+        "key": "30"
+      },
+      {
+        "value": "券商",
+        "key": "31"
+      },
+      {
+        "value": "公募基金及子公司",
+        "key": "32"
+      },
+      {
+        "value": "保险",
+        "key": "33"
+      },
+      {
+        "value": "其他金融机构",
+        "key": "34"
+      },
+      {
+        "value": "IT互联网",
+        "key": "35"
+      },
+      {
+        "value": "通信",
+        "key": "36"
+      },
+      {
+        "value": "电子",
+        "key": "37"
+      },
+      {
+        "value": "综合类",
+        "key": "38"
+      },
+      {
+        "value": "国防军工",
+        "key": "39"
+      },
+      {
+        "value": "航空航天",
+        "key": "40"
+      },
+      {
+        "value": "节能环保",
+        "key": "41"
+      },
+      {
+        "value": "新能源",
+        "key": "42"
+      },
+      {
+        "value": "新材料",
+        "key": "43"
+      }
+    ],
+    "cascaderRegion": [
+      {
+        "value": "0",
+        "label": "浙江",
+        "children": [
+          {
+            "value": "1",
+            "label": "杭州",
+            "children": [
+              {
+                "value": "2",
+                "label": "西湖"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "value": "10",
+        "label": "江苏",
+        "children": [
+          {
+            "value": "11",
+            "label": "南京",
+            "children": [
+              {
+                "value": "12",
+                "label": "中华门"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "project": {
+      "key": "2143324432",
+      "title": "这是债权项目",
+      "category": "0",
+      "type": "2",
+      "detail": "项目详情",
+      "accessory": {
+        "name": "测试附件.doc",
+        "link": "http://www.ronglaoban.cn///images/attachment/2017/07/13/测试附件.docx"
+      }
+    },
+    "financing": {
+      "industry": "11",
+      "aptitude": "融资方开发资质",
+      "parentAptitue": "母公司开发资质",
+      "previousProfits": 252,
+      "recentProfits": 214,
+      "nextProfits": 5364,
+      "number": 124,
+      "deadline": 7,
+      "maxRate": 11,
+      "region": [
+        "0",
+        "1",
+        "2"
+      ]
+    },
+    "stock": {
+      "type": "2",
+      "property": "1",
+      "number": 52,
+      "rate": 12,
+      "estimate": {
+        "times": 15,
+        "type": "2"
+      }
+    },
+    "target": {
+      "name": "标的企业名称",
+      "industry": "1",
+      "previousProfits": 252,
+      "recentProfits": 124,
+      "value": 123,
+      "nextProfits": 543,
+      "number": 124,
+      "region": [
+        "0",
+        "1",
+        "2"
+      ]
+    },
+    "assets": {
+      "region": [
+        "0",
+        "1",
+        "2"
+      ],
+      "value": 214,
+      "number": 2145
+    },
+    "mortgage": {
+      "isNeed": "1",
+      "type": [
+        "1",
+        "2"
+      ],
+      "name": "抵押物名称",
+      "value": 12,
+      "rate": 25
+    },
+    "guarantee": {
+      "isNeed": "1",
+      "method": "资产抵押"
+    },
+    "accessory": {
+      "name": "测试附件.doc",
+      "link": "http://www.ronglaoban.cn///images/attachment/2017/07/13/测试附件.docx"
+    }
+  }
+}

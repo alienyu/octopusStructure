@@ -1,0 +1,72 @@
+{
+  "status": 200,
+  "errMsg": "dgfd",
+  "data": {
+    "current": 1,
+    "total": 362,
+    "list": [{
+      "key": 1,
+      "category": 1,
+      "title": "债权资金",
+      "progress": 1,
+      "publisherTime": "2017-09-27 23:50",
+      "deliverCount": 11
+    }, {
+      "key": 2,
+      "category": 2,
+      "title": "股权资金",
+      "progress": 0,
+      "publisherTime": "2017-09-27 23:50",
+      "deliverCount": 31
+    }, {
+      "key": 3,
+      "category": 3,
+      "title": "资产收购",
+      "progress": 1,
+      "publisherTime": "2017-09-27 23:50",
+      "deliverCount": 543
+    }, {
+      "key": 4,
+      "category": 1,
+      "title": "普通资金",
+      "progress": 0,
+      "publisherTime": "2017-09-27 23:50",
+      "deliverCount": 12
+    }, {
+      "key": 5,
+      "category": 3,
+      "title": "普通资金",
+      "progress": 1,
+      "publisherTime": "2017-09-27 23:50",
+      "deliverCount": 543
+    }, {
+      "key": 11,
+      "category": 2,
+      "title": "普通资金",
+      "progress": 1,
+      "publisherTime": "2017-09-27 23:50",
+      "deliverCount": 654
+    }, {
+      "key": 12,
+      "category": 1,
+      "title": "普通资金",
+      "progress": 1,
+      "publisherTime": "2017-09-27 23:50",
+      "deliverCount": 21
+    }, {
+      "key": 15,
+      "category": 0,
+      "title": "普通资金",
+      "progress": 1,
+      "publisherTime": "2017-09-27 23:50",
+      "deliverCount": 33
+    }, {
+      "key": 16,
+      "category": 1,
+      "title": "普通资金",
+      "progress": 1,
+      "publisherTime": "2017-09-27 23:50",
+      "deliverCount": 55
+    }]
+  }
+}

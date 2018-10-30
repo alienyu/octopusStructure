@@ -1,0 +1,13 @@
+{
+  "status": 200,
+  "errMsg": "dsgd",
+  "data": {
+    "id": "4223",
+    "time": "2017-09-11 22:11:22",
+    "userName": "各顾各",
+    "userID": "213",
+    "content": "脱氧核糖",
+    "fileName": "投递文件名",
+    "fileLink": "http://www.ronglaoban.cn//images/attachment/2017/07/13/测试附件.docx"
+  }
+}

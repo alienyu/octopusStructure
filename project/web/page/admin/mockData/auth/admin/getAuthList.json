@@ -1,0 +1,66 @@
+{
+  "status": 200,
+  "errMsg": "",
+  "data": [
+    {
+      "id": "0101",
+      "name": "管理员及权限",
+      "checked": true
+    },
+    {
+      "id": "0102",
+      "name": "用户管理",
+      "checked": true
+    },
+    {
+      "id": "0103",
+      "name": "资金管理",
+      "checked": false
+    },
+    {
+      "id": "0104",
+      "name": "项目管理",
+      "checked": false
+    },
+    {
+      "id": "0105",
+      "name": "举报",
+      "checked": false
+    },
+    {
+      "id": "0106",
+      "name": "公告管理",
+      "checked": false
+    },
+    {
+      "id": "0107",
+      "name": "广告管理",
+      "checked": true
+    },
+    {
+      "id": "0108",
+      "name": "活动管理",
+      "checked": false
+    },
+    {
+      "id": "0109",
+      "name": "平台管理",
+      "checked": false
+    },
+    {
+      "id": "0110",
+      "name": "帮助中心",
+      "checked": false
+    },
+    {
+      "id": "0111",
+      "name": "财务管理",
+      "checked": false
+    },
+    {
+      "id": "0112",
+      "name": "友情链接管理",
+      "checked": false
+    }
+  ]
+}

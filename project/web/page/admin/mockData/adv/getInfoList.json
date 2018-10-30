@@ -1,0 +1,82 @@
+{
+  "status": 200,
+  "errMsg": "sdfs",
+  "data": {
+    "current": 1,
+    "total": 123,
+    "list": [
+      {
+        "key": 12,
+        "name": "广告长标题示例广告长标题示例广告长标题示例广告长标题示例广告长标题示例",
+        "img": "http://ronglaoban.cn/images/siteNotice/2017/05/25/1495703720781939.jpeg",
+        "time": "2017-10-13 22:11:34",
+        "status": "1",
+        "link": "http://www.baidu.com",
+        "type": "2"
+      },
+      {
+        "key": 1,
+        "name": "公告标题",
+        "img": "http://ronglaoban.cn/images/siteNotice/2017/05/25/1495703720781939.jpeg",
+        "time": "2017-10-13 22:11:34",
+        "status": "0",
+        "link": "http://www.baidu.com",
+        "type": "1"
+      },
+      {
+        "key": 2,
+        "name": "公告标题",
+        "img": "http://ronglaoban.cn/images/siteNotice/2017/05/25/1495703720781939.jpeg",
+        "time": "2017-10-13 22:11:34",
+        "status": "1",
+        "link": "http://www.baidu.com",
+        "type": "2"
+      },
+      {
+        "key": 3,
+        "name": "公告标题",
+        "img": "http://ronglaoban.cn/images/siteNotice/2017/05/25/1495703720781939.jpeg",
+        "time": "2017-10-13 22:11:34",
+        "status": "0",
+        "link": "http://www.baidu.com",
+        "type": "2"
+      },
+      {
+        "key": 4,
+        "name": "公告标题",
+        "img": "http://ronglaoban.cn/images/siteNotice/2017/05/25/1495703720781939.jpeg",
+        "time": "2017-10-13 22:11:34",
+        "status": "0",
+        "link": "http://www.baidu.com",
+        "type": "1"
+      },
+      {
+        "key": 5,
+        "name": "公告标题",
+        "img": "http://ronglaoban.cn/images/siteNotice/2017/05/25/1495703720781939.jpeg",
+        "time": "2017-10-13 22:11:34",
+        "status": "1",
+        "link": "http://www.baidu.com",
+        "type": "1"
+      },
+      {
+        "key": 6,
+        "name": "公告标题",
+        "img": "http://ronglaoban.cn/images/siteNotice/2017/05/25/1495703720781939.jpeg",
+        "time": "2017-10-13 22:11:34",
+        "status": "0",
+        "link": "http://www.baidu.com",
+        "type": "1"
+      },
+      {
+        "key": 11,
+        "name": "公告标题",
+        "img": "http://ronglaoban.cn/images/siteNotice/2017/05/25/1495703720781939.jpeg",
+        "time": "2017-10-13 22:11:34",
+        "status": "1",
+        "link": "http://www.baidu.com",
+        "type": "2"
+      }
+    ]
+  }
+}

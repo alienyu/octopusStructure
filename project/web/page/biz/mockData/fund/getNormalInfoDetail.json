@@ -1,0 +1,50 @@
+{
+  "status": 200,
+  "data": {
+    "fundInfo": {
+      "title": "上海南京路万达广场建设项目",
+      "date": "2017-10-11",
+      "status": 1,
+      "categoryText": "股权",
+      "stockTypeText": "参股型投资",
+      "typeText": "成长型",
+      "industryText": "房地产",
+      "regionText": "浙江省, 江苏省, 上海市",
+      "lastYearProfit": 12,
+      "investMin": 300,
+      "investMax": 566,
+      "deadlineMin": 1,
+      "deadlineMax": 5,
+      "minRate": 3.55,
+      "isNeesMortgage": 1,
+      "mortgageType": "固有资产，其他",
+      "mortgageRateMin": 2.33,
+      "mortgageRateMax": 3.55,
+      "isNeedGuarantee": 1,
+      "guaranteeMethod": "担保方式",
+      "estimateBenefitsText": "6倍今年净利润",
+      "needCost": 1,
+      "content": "项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍",
+      "attachment": {
+        "name": "万达广场项目计划书.doc",
+        "link": "/ssss"
+      },
+      "seenNum": 12,
+      "favoriteNum": 11,
+      "reportNum": 5,
+      "hasSeen": false,
+      "hasFavorite": false,
+      "hasReport": false
+    },
+    "contactInfo": {
+      "memberType": "阳光融资资金方",
+      "companyName": "阳光融资有限公司",
+      "department": "技术研发部",
+      "position": "高级工程师",
+      "name": "刘国柱",
+      "phone": "021-123123131",
+      "mobile": "139189123123",
+      "email": "5233523@qqq.com"
+    }
+  }
+}

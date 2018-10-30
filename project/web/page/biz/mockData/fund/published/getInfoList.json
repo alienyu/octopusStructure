@@ -1,0 +1,44 @@
+{
+    "status": 200,
+    "errMsg": "fds",
+    "data": {
+        "total": 213,
+        "infoList": [{
+            "id": 1,
+            "category": "2",
+            "title": "普通资金普通资金普通资金普通资金普通资金",
+            "stockType": 1,
+            "type": ["股权子类型1", "股权子类型2"],
+            "investMin": 543,
+            "investMax": 5665,
+            "seen": 124,
+            "region": ["上海", "北京"],
+            "industry": ["金融信息行业", "房地产"],
+            "status": 1
+          },{
+            "id": 2,
+            "category": "1",
+            "title": "普通资金普通资金普通资金普通资金普通资金",
+            "stockType": 1,
+            "type": ["股权子类型1", "股权子类型2"],
+            "investMin": 543,
+            "investMax": 5665,
+            "seen": 124,
+            "region": ["上海", "北京"],
+            "industry": ["金融信息行业", "房地产"],
+            "status": 1
+          },{
+            "id": 3,
+            "category": "3",
+            "title": "普通资金普通资金普通资金普通资金普通资金",
+            "stockType": 1,
+            "type": ["股权子类型1", "股权子类型2"],
+            "investMin": 543,
+            "investMax": 5665,
+            "seen": 124,
+            "region": ["上海", "北京"],
+            "industry": ["金融信息行业", "房地产"],
+            "status": 0
+          }]
+    }
+}

@@ -1,0 +1,13 @@
+{
+  "status": 200,
+  "errMsg": "dsfds",
+  "data": {
+    "roleId": 1,
+    "account": "yuyongjian",
+    "password": "aaaa",
+    "confirmPassword": "aaaa",
+    "name": "於永健",
+    "mobile": "13918913343",
+    "status": 1
+  }
+}

@@ -1,0 +1,237 @@
+{
+  "status": 200,
+  "errMsg": "xxx",
+  "data": {
+    "menuItems": [
+      {
+        "key": "auth",
+        "name": "管理员及权限",
+        "url": "",
+        "children": [
+          {
+            "key": "auth-manage",
+            "name": "管理员列表",
+            "url": "/auth/manage"
+          },
+          {
+            "key": "auth-admin",
+            "name": "管理员权限",
+            "children": [
+              {
+                "key": "auth-admin-user",
+                "name": "用户管理员",
+                "url": "/auth/admin/user"
+              },
+              {
+                "key": "auth-admin-project",
+                "name": "项目管理员",
+                "url": "/auth/admin/project"
+              },
+              {
+                "key": "auth-admin-fund",
+                "name": "资金管理员",
+                "url": "/auth/admin/fund"
+              },
+              {
+                "key": "auth-admin-other",
+                "name": "其他栏目管理员",
+                "url": "/auth/admin/other"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "user",
+        "name": "用户管理",
+        "url": "",
+        "children": [
+          {
+            "key": "user-manage",
+            "name": "用户列表",
+            "url": "/user/manage"
+          },
+          {
+            "key": "user-message",
+            "name": "群发短信",
+            "url": "/user/message"
+          },
+          {
+            "key": "user-mail",
+            "name": "群发邮件",
+            "url": "/user/mail"
+          }
+        ]
+      },
+      {
+        "key": "fund",
+        "name": "资金管理",
+        "url": "",
+        "children": [
+          {
+            "key": "fund-normal",
+            "name": "普通资金",
+            "url": "/fund/normal"
+          }
+        ]
+      },
+      {
+        "key": "project",
+        "name": "项目管理",
+        "url": "",
+        "children": [
+          {
+            "key": "project-normal",
+            "name": "普通项目",
+            "url": "/project/normal"
+          }
+        ]
+      },
+      {
+          "key": "delegateFund",
+          "name": "委托资金",
+          "url": "",
+          "children": [
+            {
+              "key": "delegateFund-list",
+              "name": "资金列表",
+              "url": "/delegateFund"
+            }
+          ]
+      },
+      {
+        "key": "delegateProject",
+        "name": "委托项目",
+        "url": "",
+        "children": [
+          {
+            "key": "delegateProject-list",
+            "name": "项目列表",
+            "url": "/delegateProject"
+          }
+        ]
+      },
+      {
+        "key": "report",
+        "name": "举报管理",
+        "url": "",
+        "children": [
+          {
+            "key": "report-list",
+            "name": "举报列表",
+            "url": "/report"
+          }
+        ]
+      },
+      {
+        "key": "notice",
+        "name": "公告管理",
+        "url": "",
+        "children": [
+          {
+            "key": "notice-list",
+            "name": "公告列表",
+            "url": "/notice"
+          }
+        ]
+      },
+      {
+        "key": "adv",
+        "name": "广告管理",
+        "url": "",
+        "children": [
+          {
+            "key": "adv-list",
+            "name": "广告列表",
+            "url": "/adv"
+          }
+        ]
+      },
+      {
+        "key": "activity",
+        "name": "活动管理",
+        "url": "",
+        "children": [
+          {
+            "key": "activity-list",
+            "name": "活动列表",
+            "url": "/activity"
+          }
+        ]
+      },
+      {
+        "key": "platform",
+        "name": "平台管理",
+        "url": "",
+        "children": [
+          {
+            "key": "platform-company",
+            "name": "公司概况",
+            "url": "/platform/company"
+          },
+          {
+            "key": "platform-news",
+            "name": "行业动态",
+            "url": "/platform/news"
+          },
+          {
+            "key": "platform-report",
+            "name": "媒体报道",
+            "url": "/platform/report"
+          },
+          {
+            "key": "platform-contact",
+            "name": "联系方式",
+            "url": "/platform/contact"
+          }
+        ]
+      },
+      {
+        "key": "help",
+        "name": "帮助中心",
+        "url": "",
+        "children": [
+          {
+            "key": "help-qa",
+            "name": "常见问题",
+            "url": "/help/qa"
+          },
+          {
+            "key": "help-feedback",
+            "name": "意见反馈",
+            "url": "/help/feedback"
+          }
+        ]
+      },
+      {
+        "key": "finance",
+        "name": "财务管理",
+        "url": "",
+        "children": [
+          {
+            "key": "finance-recharge",
+            "name": "充值",
+            "url": "/finance/recharge"
+          },
+          {
+            "key": "finance-consumption",
+            "name": "消费",
+            "url": "/finance/consumption"
+          }
+        ]
+      },
+      {
+        "key": "link",
+        "name": "友情链接",
+        "url": "",
+        "children": [
+          {
+            "key": "link-list",
+            "name": "链接列表",
+            "url": "/link"
+          }
+        ]
+      }
+    ]
+  }
+}

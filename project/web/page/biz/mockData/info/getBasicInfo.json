@@ -1,0 +1,61 @@
+{
+    "status": 200,
+    "data": {
+        "basicInfo": {
+            "hasUploadAvatar": false,
+            "avatarImg": "http://img0.imgtn.bdimg.com/it/u=2764371306,3467823016&fm=27&gp=0.jpg",
+            "firstName": "於",
+            "lastName": "永健",
+            "cuteName": "金麦基",
+            "gender": 2,
+            "regionSelectedResult": "101112",
+            "companyName": "上海巨富事业",
+            "department": "技术部",
+            "position": "开发",
+            "companyInfo": "阳光融资阳光融资阳光融资阳光融资阳光融资阳光融资阳光融资阳光融资阳光融资阳光融资阳光融资",
+            "phone": "242342342323",
+            "mobile": "1391482342",
+            "mobileShow": 0,
+            "email": "53204234@qq.com",
+            "accountNum": 213.43,
+            "published": 123,
+            "delivered": 213,
+            "feedback": 5,
+            "authStatus": "0",
+            "cascaderRegion": [
+                {
+                    "value": "0",
+                    "label": "浙江",
+                    "children": [
+                        {
+                            "value": "1",
+                            "label": "杭州",
+                            "children": [
+                                {
+                                    "value": "2",
+                                    "label": "西湖"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "value": "10",
+                    "label": "江苏",
+                    "children": [
+                        {
+                            "value": "11",
+                            "label": "南京",
+                            "children": [
+                                {
+                                    "value": "12",
+                                    "label": "中华门"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

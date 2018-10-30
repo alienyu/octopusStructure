@@ -1,0 +1,15 @@
+{
+  "status": 200,
+  "errMsg": "greger",
+  "data": {
+    "detailInfo": {
+      "key": 12,
+      "title": "公告标题",
+      "content": "富文本编辑器回显",
+      "img": "http://ronglaoban.cn/images/siteNotice/2017/05/25/1495703720781939.jpeg",
+      "time": "2017-10-13 22:11:34",
+      "status": "1",
+      "link": "http://www.baidu.com"
+    }
+  }
+}

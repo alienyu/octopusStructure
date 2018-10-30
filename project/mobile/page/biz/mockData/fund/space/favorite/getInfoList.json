@@ -1,0 +1,35 @@
+{
+  "status": 200,
+  "errMsg": "dfs",
+  "data": {
+    "favoriteList": [{
+      "id": 1,
+      "title": "项目标题1",
+      "category": 1,
+      "date": "20171012",
+      "type": 1,
+      "process": 0
+    },{
+      "id": 2,
+      "title": "项目标题1",
+      "category": 2,
+      "date": "20171111",
+      "type": 2,
+      "process": 1
+    },{
+      "id": 3,
+      "title": "项目标题1",
+      "category": 3,
+      "date": "20171121",
+      "type": 2,
+      "process": 0
+    },{
+      "id": 4,
+      "title": "项目标题1",
+      "category": 2,
+      "date": "20171012",
+      "type": 2,
+      "process": 1
+    }]
+  }
+}

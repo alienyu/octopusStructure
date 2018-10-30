@@ -1,0 +1,99 @@
+{
+  "status": 200,
+  "data": {
+    "current": 4,
+    "total": 123,
+    "fundList": [{
+      "id": 1,
+      "category": "2",
+      "title": "普通资金普通资金普通资金普通资金普通资金普通资金",
+      "stockType": 1,
+      "type": ["股权子类型1", "股权子类型2"],
+      "investMin": 543,
+      "investMax": 5665,
+      "seen": 124,
+      "region": ["上海", "北京"],
+      "industry": ["金融信息行业", "房地产"],
+      "status": 1,
+      "delegate": false
+    },{
+      "id": 2,
+      "category": "2",
+      "title": "委托资金委托资金委托资金委托资金委托资金",
+      "stockType": 1,
+      "type": ["股权子类型1", "股权子类型2"],
+      "investMin": 543,
+      "investMax": 5665,
+      "seen": 124,
+      "region": ["上海", "北京"],
+      "industry": ["金融信息行业", "房地产"],
+      "status": 1,
+      "delegate": true
+    },{
+      "id": 3,
+      "category": "2",
+      "title": "普通资金普通资金普通资金普通资金普通资金普通资金",
+      "stockType": 1,
+      "type": ["股权子类型1", "股权子类型2"],
+      "investMin": 543,
+      "investMax": 5665,
+      "seen": 124,
+      "region": ["上海", "北京"],
+      "industry": ["金融信息行业", "房地产"],
+      "status": 1,
+      "delegate": false
+    },{
+      "id": 43,
+      "category": "2",
+      "title": "委托资金委托资金委托资金委托资金委托资金",
+      "stockType": 1,
+      "type": ["股权子类型1", "股权子类型2"],
+      "investMin": 543,
+      "investMax": 5665,
+      "seen": 124,
+      "region": ["上海", "北京"],
+      "industry": ["金融信息行业", "房地产"],
+      "status": 0,
+      "delegate": true
+    },{
+      "id": 4,
+      "category": "2",
+      "title": "普通资金普通资金普通资金普通资金普通资金普通资金",
+      "stockType": 1,
+      "type": ["股权子类型1", "股权子类型2"],
+      "investMin": 543,
+      "investMax": 5665,
+      "seen": 124,
+      "region": ["上海", "北京"],
+      "industry": ["金融信息行业", "房地产"],
+      "status": 1,
+      "delegate": false
+    },{
+      "id": 5,
+      "category": "2",
+      "title": "普通资金普通资金普通资金普通资金普通资金普通资金",
+      "stockType": 1,
+      "type": ["股权子类型1", "股权子类型2"],
+      "investMin": 543,
+      "investMax": 5665,
+      "seen": 124,
+      "region": ["上海", "北京"],
+      "industry": ["金融信息行业", "房地产"],
+      "status": 0,
+      "delegate": false
+    },{
+      "id": 63,
+      "category": "2",
+      "title": "普通资金普通资金普通资金普通资金普通资金普通资金",
+      "stockType": 1,
+      "type": ["股权子类型1", "股权子类型2"],
+      "investMin": 543,
+      "investMax": 5665,
+      "seen": 124,
+      "region": ["上海", "北京"],
+      "industry": ["金融信息行业", "房地产"],
+      "status": 1,
+      "delegate": false
+    }]
+  }
+}

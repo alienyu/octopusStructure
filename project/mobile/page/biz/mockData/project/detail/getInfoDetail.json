@@ -1,0 +1,84 @@
+{
+  "status": 200,
+  "errMsg": "",
+  "data": {
+    "info": {
+      "contactInfo": {
+        "status": 1,
+        "delegateObj": "阳光融资",
+        "vipUserName": "潘先生",
+        "vipType": "资金方",
+        "vipName": "信托",
+        "company": "融老板",
+        "department": "技术部门",
+        "position": "技术",
+        "phone": "021-21132523",
+        "mobile": "13918944411",
+        "email": "60423423@qq.com",
+        "favorite": 4,
+        "seen": 51,
+        "report": 74,
+        "hasSeen": false,
+        "hasFavorite": true,
+        "hasReport": false
+      },
+      "detailInfo": {
+        "title": "上海南京路万达广场建设项目",
+        "date": "2017-10-11",
+        "status": 1,
+        "categoryText": "债权",
+        "typeText": "债权子类型",
+        "regionText": "浙江省杭州市天门",
+        "financing": {
+          "industryText": "融资房地产",
+          "aptitude": "融资方开发资质",
+          "parentAptitue": "母公司开发资质",
+          "previousProfits": 252,
+          "recentProfits": 214,
+          "nextProfits": 5364,
+          "number": 124,
+          "deadline": 7,
+          "maxRate": 11,
+          "regionText": "浙江省杭州市西湖区"
+        },
+        "stockData": {
+          "typeText": "参股型项目",
+          "property": "老股",
+          "number": 52,
+          "rate": 12,
+          "estimateText": "9倍去年净利润"
+        },
+        "target": {
+          "name": "标的企业名称",
+          "industryText": "标的房地产",
+          "previousProfits": 1252,
+          "recentProfits": 1124,
+          "nextProfits": 5343,
+          "number": 1524,
+          "regionText": "江苏省南京市雨花台区"
+        },
+        "assets": {
+          "regionText": "资产所在地例子",
+          "value": 214,
+          "number": 2145
+        },
+        "mortgage": {
+          "isNeed": 1,
+          "typeText": "固定资产, 有价证券",
+          "name": "抵押物名称",
+          "value": 12,
+          "rate": 25
+        },
+        "guarantee": {
+          "isNeed": 1,
+          "method": "资产抵押"
+        },
+        "content": "项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍",
+        "attachment": {
+          "name": "万达广场项目计划书.doc",
+          "link": "/ssss"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "status": 200,
+  "errMsg": "sdfs",
+  "data": {
+    "current": 1,
+    "total": 123,
+    "list": [{
+      "key": 12,
+      "title": "长标题示例长标题示例长标题示例长标题示例长标题示例长标题示例长标题示例长标题示例长标题示例长标题示例长标题示例长标题示例长标题示例长标题示例",
+      "img": "http://ronglaoban.cn/images/siteNotice/2017/05/25/1495703720781939.jpeg",
+      "time": "2017-10-13 22:11:34",
+      "status": "1",
+      "link": "http://www.baidu.com"
+    }, {
+      "key": 1,
+      "title": "公告标题",
+      "img": "http://ronglaoban.cn/images/siteNotice/2017/05/25/1495703720781939.jpeg",
+      "time": "2017-10-13 22:11:34",
+      "status": "0",
+      "link": "http://www.baidu.com"
+    }, {
+      "key": 2,
+      "title": "公告标题",
+      "img": "http://ronglaoban.cn/images/siteNotice/2017/05/25/1495703720781939.jpeg",
+      "time": "2017-10-13 22:11:34",
+      "status": "1",
+      "link": "http://www.baidu.com"
+    }, {
+      "key": 3,
+      "title": "公告标题",
+      "img": "http://ronglaoban.cn/images/siteNotice/2017/05/25/1495703720781939.jpeg",
+      "time": "2017-10-13 22:11:34",
+      "status": "0",
+      "link": "http://www.baidu.com"
+    }, {
+      "key": 4,
+      "title": "公告标题",
+      "img": "http://ronglaoban.cn/images/siteNotice/2017/05/25/1495703720781939.jpeg",
+      "time": "2017-10-13 22:11:34",
+      "status": "0",
+      "link": "http://www.baidu.com"
+    }, {
+      "key": 5,
+      "title": "公告标题",
+      "img": "http://ronglaoban.cn/images/siteNotice/2017/05/25/1495703720781939.jpeg",
+      "time": "2017-10-13 22:11:34",
+      "status": "1",
+      "link": "http://www.baidu.com"
+    }, {
+      "key": 6,
+      "title": "公告标题",
+      "img": "http://ronglaoban.cn/images/siteNotice/2017/05/25/1495703720781939.jpeg",
+      "time": "2017-10-13 22:11:34",
+      "status": "0",
+      "link": "http://www.baidu.com"
+    }, {
+      "key": 11,
+      "title": "公告标题",
+      "img": "http://ronglaoban.cn/images/siteNotice/2017/05/25/1495703720781939.jpeg",
+      "time": "2017-10-13 22:11:34",
+      "status": "1",
+      "link": "http://www.baidu.com"
+    }]
+  }
+}

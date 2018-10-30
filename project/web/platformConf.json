@@ -1,0 +1,7 @@
+{
+    "pageList": [
+        "admin",
+        "biz"
+    ],
+    "vendorConf": ["react", "react-dom", "react-router", "jquery", "antd"]
+}

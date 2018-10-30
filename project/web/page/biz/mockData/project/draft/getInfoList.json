@@ -1,0 +1,38 @@
+{
+    "status": 200,
+    "errMsg": "fds",
+    "data": {
+        "total": 213,
+        "infoList": [{
+            "id": 1,
+            "title": "普通项目普通项目普通项目普通项目普通项目",
+            "category": "2",
+            "stockType": 2,
+            "type": "子类型",
+            "industry": "房地产",
+            "region": "浙江省杭州市天门",
+            "financingNum": 5000,
+            "seen": 123
+          },{
+            "id": 2,
+            "title": "普通项目普通项目普通项目普通项目普通项目",
+            "category": "2",
+            "stockType": 2,
+            "type": "子类型",
+            "industry": "房地产",
+            "region": "浙江省杭州市天门",
+            "financingNum": 5000,
+            "seen": 123
+          },{
+            "id": 3,
+            "title": "普通项目普通项目普通项目普通项目普通项目",
+            "category": "2",
+            "stockType": 2,
+            "type": "子类型",
+            "industry": "房地产",
+            "region": "浙江省杭州市天门",
+            "financingNum": 5000,
+            "seen": 123
+          }]
+    }
+}

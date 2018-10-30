@@ -1,0 +1,33 @@
+{
+  "status": 200,
+  "errMsg": "dsfds",
+  "data": {
+    "current": 1,
+    "total": 123,
+    "list": [{
+      "key": 1,
+      "name": "友情连接",
+      "link": "www.ronglaoba.cn"
+    },{
+      "key": 2,
+      "name": "友情连接",
+      "link": "www.ronglaoba.cn"
+    },{
+      "key": 3,
+      "name": "友情连接",
+      "link": "www.ronglaoba.cn"
+    },{
+      "key": 4,
+      "name": "友情连接",
+      "link": "www.ronglaoba.cn"
+    },{
+      "key": 5,
+      "name": "友情连接",
+      "link": "www.ronglaoba.cn"
+    },{
+      "key": 6,
+      "name": "友情连接",
+      "link": "www.ronglaoba.cn"
+    }]
+  }
+}

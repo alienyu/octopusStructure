@@ -1,0 +1,45 @@
+{
+  "status": 200,
+  "errMsg": "",
+  "data": {
+    "fundList": [{
+      "id": 1,
+      "category": "1",
+      "title": "债券资金债券资金债券资金债券资金",
+      "type": "债权子类型",
+      "investMin": 311,
+      "investMax": 511,
+      "seen": 222,
+      "fundType": "normal"
+    },{
+      "id": 2,
+      "category": "2",
+      "title": "股权资金股权资金股权资金股权资金",
+      "stockType": 1,
+      "type": "股权子类型",
+      "investMin": 543,
+      "investMax": 5665,
+      "seen": 124,
+      "fundType": "delegate"
+    },{
+      "id": 3,
+      "category": "2",
+      "title": "债券资金债券资金债券资金债券资金",
+      "stockType": 2,
+      "type": "股权子类型",
+      "investMin": 123,
+      "investMax": 435,
+      "seen": 324,
+      "fundType": "normal"
+    },{
+      "id": 4,
+      "category": "3",
+      "title": "资产收购资产收购资产收购资产收购资产收购",
+      "type": "资产收购子类型",
+      "investMin": 324,
+      "investMax": 546,
+      "seen": 324,
+      "fundType": "delegate"
+    }]
+  }
+}

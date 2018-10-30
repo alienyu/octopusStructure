@@ -1,0 +1,50 @@
+{
+  "status": 200,
+  "errMsg": "",
+  "data": {
+    "featureList": [{
+      "key": 1,
+      "value": "银行"
+    }, {
+      "key": 2,
+      "value": "信托"
+    }, {
+      "key": 3,
+      "value": "券商"
+    }, {
+      "key": 4,
+      "value": "公墓基金及子公司"
+    }, {
+      "key": 5,
+      "value": "保险公司"
+    }, {
+      "key": 6,
+      "value": "四大资产"
+    }, {
+      "key": 7,
+      "value": "上市公司"
+    }, {
+      "key": 8,
+      "value": "私募基金"
+    }, {
+      "key": 9,
+      "value": "投资公司"
+    }, {
+      "key": 10,
+      "value": "实体企业"
+    }, {
+      "key": 11,
+      "value": "小贷公司"
+    }, {
+      "key": 12,
+      "value": "其他"
+    }],
+    "uploader": {
+      "bizLicence": "http://img0.imgtn.bdimg.com/it/u=2764371306,3467823016&fm=27&gp=0.jpg",
+      "company": "http://img5.imgtn.bdimg.com/it/u=12867320,655225767&fm=27&gp=0.jpg",
+      "personal": "http://img5.imgtn.bdimg.com/it/u=547138142,3998729701&fm=27&gp=0.jpg",
+      "certification": "http://img4.imgtn.bdimg.com/it/u=1611505379,380489200&fm=214&gp=0.jpg"
+    },
+    "feature": 4
+  }
+}

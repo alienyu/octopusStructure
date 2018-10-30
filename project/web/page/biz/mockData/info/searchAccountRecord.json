@@ -1,0 +1,67 @@
+{
+    "status": 200,
+    "data": {
+        "total": 123,
+        "recordList": [{
+            "recordID": "CZ3543435345343453",
+            "time": "2018-01-01",
+            "desc": "充值",
+            "recordNum": "+100",
+            "accountLeft": "3000"
+        },{
+            "recordID": "CZ354342131245343453",
+            "time": "2018-01-02",
+            "desc": "充值",
+            "recordNum": "-100",
+            "accountLeft": "4000"
+        },{
+            "recordID": "CZ3545435345343453",
+            "time": "2018-01-03",
+            "desc": "充值",
+            "recordNum": "+100",
+            "accountLeft": "5000"
+        },{
+            "recordID": "CZ35434341245343453",
+            "time": "2018-01-01",
+            "desc": "充值",
+            "recordNum": "+100",
+            "accountLeft": "3000"
+        },{
+            "recordID": "CZ35434254345343453",
+            "time": "2018-01-02",
+            "desc": "充值",
+            "recordNum": "-100",
+            "accountLeft": "4000"
+        },{
+            "recordID": "CZ3545412345343453",
+            "time": "2018-01-03",
+            "desc": "充值",
+            "recordNum": "+100",
+            "accountLeft": "5000"
+        },{
+            "recordID": "CZ3543435543533453",
+            "time": "2018-01-01",
+            "desc": "充值",
+            "recordNum": "+100",
+            "accountLeft": "3000"
+        },{
+            "recordID": "CZ3543124545343453",
+            "time": "2018-01-02",
+            "desc": "充值",
+            "recordNum": "-100",
+            "accountLeft": "4000"
+        },{
+            "recordID": "CZ3545412323524153",
+            "time": "2018-01-03",
+            "desc": "充值",
+            "recordNum": "+100",
+            "accountLeft": "5000"
+        },{
+            "recordID": "CZ3543532345343453",
+            "time": "2018-01-03",
+            "desc": "充值",
+            "recordNum": "+100",
+            "accountLeft": "5000"
+        }]
+    }
+}

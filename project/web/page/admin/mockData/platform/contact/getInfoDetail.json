@@ -1,0 +1,14 @@
+{
+  "status": 200,
+  "errMsg": "dfs",
+  "data": {
+    "detailInfo": {
+      "exchangeNumber": "021-2423423",
+      "helpNumber": "021-213243",
+      "fax": "021-432432",
+      "address": "上海市浦东新区浦电路111号",
+      "postcode": "200012",
+      "email": "xxxx@ff.com"
+    }
+  }
+}

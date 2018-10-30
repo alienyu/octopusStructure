@@ -1,0 +1,76 @@
+.fundListFrame {
+    width: 1024px;
+    left: 50%;
+    margin-left: -512px;
+    .ant-breadcrumb {
+        padding: 10px 0;
+        span {
+            color: #9C9C9C;
+        }
+    }
+    .filterForm {
+        padding: 0 20px;
+        background: #fff;
+        height: 50px;
+        line-height: 50px;
+        .multiSelect {
+            width: 180px;
+            height: 32px;
+            overflow: scroll;
+            border: 1px solid #e1e1e1;
+            border-radius: 2px;
+        }
+        .ant-select-lg .ant-select-selection--multiple {
+            border: 0;
+        }
+        .financingNum {
+            width: 130px;
+        }
+    }
+    .fundList {
+        padding: 0 20px;
+        background: #fff;
+        .ant-row {
+            margin: 10px 0px;
+        }
+        .itemDetail {
+            margin-bottom: 20px;
+            .content {
+                display: inline-block;
+                margin-left: 10px;
+            }
+        }
+        .overText {
+            color: #d1d1d1;
+        }
+        .redText {
+            color: #DE6269;
+        }
+        .status {
+            padding: 0px 5px;
+            text-align: center;
+            color: #fff;
+            background: #d1d1d1;
+            &.progress {
+                background: #1AA500;
+            }
+        }
+        .goToDetail {
+            display: inline-block;
+            color: #fff;
+            background: #0090FF;
+            width: 100%;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            &.over {
+                color: #000;
+                border: 1px solid #e1e1e1;
+                background: #fff;
+            }
+        }
+        .pagination {
+            margin-bottom: 20px;
+        }
+    }
+}

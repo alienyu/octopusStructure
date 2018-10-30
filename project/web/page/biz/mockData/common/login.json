@@ -1,0 +1,10 @@
+{
+  "status": 200,
+  "data": {
+    "userInfo": {
+      "name": "alienyu",
+      "type": "project"
+    },
+    "token": "fsdgdgf"
+  }
+}

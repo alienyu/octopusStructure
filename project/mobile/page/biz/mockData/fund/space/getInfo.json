@@ -1,0 +1,22 @@
+{
+  "status": 200,
+  "errMsg": "dfgdf",
+  "data": {
+    "hasUploadAvatar": false,
+    "avatarImg": "",
+    "firstName": "於",
+    "lastName": "永健",
+    "cuteName": "金麦基",
+    "gender": 1,
+    "regionSelectPopup": false,
+    "regionSelectedResult": "350990",
+    "companyName": "上海巨富事业",
+    "department": "技术部",
+    "position": "开发",
+    "companyInfo": "阳光融资公司阳光融资公司阳光融资公司阳光融资公司阳光融资公司阳光融资公司阳光融资公司",
+    "phone": "242342342323",
+    "mobile": "1391482342",
+    "mobileShow": true,
+    "email": "53204234@qq.com"
+  }
+}

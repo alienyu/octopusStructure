@@ -1,0 +1,45 @@
+{
+  "status": 200,
+  "errMsg": "",
+  "data": {
+    "projectList": [{
+      "id": 1,
+      "category": "1",
+      "title": "债权项目标题债权项目标题债权项目标题",
+      "type": "债权子类型",
+      "investMin": 311,
+      "investMax": 511,
+      "seen": 222,
+      "projectType": "normal"
+    },{
+      "id": 2,
+      "category": "2",
+      "title": "股权项目参股股权项目参股股权项目参股",
+      "stockType": 1,
+      "type": "股权子类型",
+      "investMin": 543,
+      "investMax": 5665,
+      "seen": 124,
+      "projectType": "delegate"
+    },{
+      "id": 3,
+      "category": "2",
+      "title": "股权项目控股股权项目控股股权项目控股",
+      "stockType": 2,
+      "type": "股权子类型",
+      "investMin": 123,
+      "investMax": 435,
+      "seen": 324,
+      "projectType": "normal"
+    },{
+      "id": 4,
+      "category": "3",
+      "title": "资产转让资产转让资产转让资产转让",
+      "type": "资产收购子类型",
+      "investMin": 324,
+      "investMax": 546,
+      "seen": 324,
+      "projectType": "delegate"
+    }]
+  }
+}

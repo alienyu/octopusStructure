@@ -1,0 +1,15 @@
+{
+    "status": 200,
+    "data": {
+        "SEOLink": [{
+            "link": "http://www.baidu.com",
+            "value": "百度"
+        }, {
+            "link": "http://www.baidu.com",
+            "value": "百度"
+        }, {
+            "link": "http://www.baidu.com",
+            "value": "百度"
+        }]
+    }
+}

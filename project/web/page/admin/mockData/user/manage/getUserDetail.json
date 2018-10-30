@@ -1,0 +1,25 @@
+{
+  "status": 200,
+  "errMsg": "dsfds",
+  "data": {
+      "name": "刘国柱",
+      "gender": "1",
+      "nickName": "莉莉",
+      "headPic": "http://ronglaoban.cn/images/photo/2017/07/16/17240306.png",
+      "licensePic": "http://ronglaoban.cn/images/auth/2017/07/16/busiLicence/17240306.png",
+      "companyPic": "http://ronglaoban.cn/images/auth/2017/07/16/companyCard/17240306.png",
+      "privatePic": "http://ronglaoban.cn/images/auth/2017/07/16/idCard/17240306.png",
+      "idPic": "http://ronglaoban.cn/images/auth/2017/07/16/photo/17240306.png",
+      "region": "天津天津和平区",
+      "company": "上海木偶房产中介",
+      "department": "销售部",
+      "position": "销售经理",
+      "mobile": "131111111111",
+      "phone": "021-3456790",
+      "mail": "2283680103@qq.com",
+      "qq": "2283680103",
+      "wx": "weixinwe",
+      "weibo": "weibo",
+      "audit": "1"
+  }
+}

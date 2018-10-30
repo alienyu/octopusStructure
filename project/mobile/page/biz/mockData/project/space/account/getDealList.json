@@ -1,0 +1,58 @@
+{
+  "status": 200,
+  "errMsg": "",
+  "data": {
+    "dealList": [
+      {
+        "id": 121,
+        "time": "2017-11-11",
+        "fund": {
+          "id": 1,
+          "title": "资金标题"
+        },
+        "change": "-121",
+        "account": 213
+      },
+      {
+        "id": 4,
+        "time": "2017-11-11",
+        "fund": {
+          "id": 2,
+          "title": "资金标题"
+        },
+        "change": "-51",
+        "account": 213
+      },
+      {
+        "id": 3,
+        "time": "2017-11-11",
+        "fund": {
+          "id": 31,
+          "title": "资金标fd题"
+        },
+        "change": "-11",
+        "account": 213
+      },
+      {
+        "id": 11,
+        "time": "2017-11-11",
+        "fund": {
+          "id": 4,
+          "title": "资金标题"
+        },
+        "change": "-51",
+        "account": 243213
+      },
+      {
+        "id": 21,
+        "time": "2017-11-11",
+        "fund": {
+          "id":51,
+          "title": "资金标题"
+        },
+        "change": "-21",
+        "account": 5413
+      }
+    ]
+  }
+}

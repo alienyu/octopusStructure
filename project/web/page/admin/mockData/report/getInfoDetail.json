@@ -1,0 +1,73 @@
+{
+  "status": 200,
+  "errMsg": "",
+  "data": {
+    "pageNum": 1,
+    "pageSize": 4,
+    "size": 4,
+    "startRow": 0,
+    "endRow": 3,
+    "total": 4,
+    "pages": 1,
+    "list": [
+      {
+        "id": 7,
+        "userId": null,
+        "name": null,
+        "content": "举报测试",
+        "reportTime": "2018-04-08 23:36:27",
+        "reporter": {
+          "name": "赵跃",
+          "id": 2
+        }
+      },
+      {
+        "id": 4,
+        "userId": null,
+        "name": null,
+        "content": "举报测试",
+        "reportTime": "2018-04-06 22:00:29",
+        "reporter": {
+          "name": "赵跃",
+          "id": 2
+        }
+      },
+      {
+        "id": 1,
+        "userId": null,
+        "name": null,
+        "content": "xxx3",
+        "reportTime": null,
+        "reporter": {
+          "name": "赵跃",
+          "id": 2
+        }
+      },
+      {
+        "id": 3,
+        "userId": null,
+        "name": null,
+        "content": "3",
+        "reportTime": null,
+        "reporter": {
+          "name": "赵跃",
+          "id": 2
+        }
+      }
+    ],
+    "prePage": 0,
+    "nextPage": 0,
+    "isFirstPage": true,
+    "isLastPage": true,
+    "hasPreviousPage": false,
+    "hasNextPage": false,
+    "navigatePages": 8,
+    "navigatepageNums": [
+      1
+    ],
+    "navigateFirstPage": 1,
+    "navigateLastPage": 1,
+    "firstPage": 1,
+    "lastPage": 1
+  }
+}

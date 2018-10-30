@@ -1,0 +1,78 @@
+{
+  "status": 200,
+  "data": {
+    "projectInfo": {
+      "title": "上海南京路万达广场建设项目",
+      "date": "2017-10-11",
+      "status": 1,
+      "categoryText": "资产转让",
+      "typeText": "债权子类型",
+      "regionText": "浙江省杭州市天门",
+      "financing": {
+        "industryText": "融资房地产",
+        "aptitude": "融资方开发资质",
+        "parentAptitue": "母公司开发资质",
+        "previousProfits": 252,
+        "recentProfits": 214,
+        "nextProfits": 5364,
+        "number": 124,
+        "deadline": 7,
+        "maxRate": 11,
+        "regionText": "浙江省杭州市西湖区"
+      },
+      "stockData": {
+        "typeText": "参股型项目",
+        "property": "新股增发",
+        "number": 52,
+        "rate": 12,
+        "estimateText": "9倍去年净利润"
+      },
+      "target": {
+        "name": "标的企业名称",
+        "industryText": "标的房地产",
+        "previousProfits": 1252,
+        "recentProfits": 1124,
+        "nextProfits": 5343,
+        "number": 1524,
+        "regionText": "江苏省南京市雨花台区"
+      },
+      "assets": {
+        "regionText": "资产所在地例子",
+        "value": 214,
+        "number": 2145
+      },
+      "mortgage": {
+        "isNeed": 1,
+        "typeText": "固定资产, 有价证券",
+        "name": "抵押物名称",
+        "value": 12,
+        "rate": 25
+      },
+      "guarantee": {
+        "isNeed": 1,
+        "method": "资产抵押"
+      },
+      "content": "项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍",
+      "attachment": {
+        "name": "万达广场项目计划书.doc",
+        "link": "/ssss"
+      },
+      "seenNum": 12,
+      "favoriteNum": 11,
+      "reportNum": 5,
+      "hasSeen": true,
+      "hasFavorite": false,
+      "hasReport": false
+    },
+    "contactInfo": {
+      "memberType": "阳光融资资金方",
+      "companyName": "阳光融资有限公司",
+      "department": "技术研发部",
+      "position": "高级工程师",
+      "name": "刘国柱",
+      "phone": "021-123123131",
+      "mobile": "139189123123",
+      "email": "5233523@qqq.com"
+    }
+  }
+}

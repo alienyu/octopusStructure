@@ -1,0 +1,39 @@
+@import './overview.less';
+@import './news.less';
+@import './report.less';
+@import './contact.less';
+
+.aboutPage {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+    .ant-breadcrumb {
+        padding: 10px 0;
+        span {
+            color: #9C9C9C;
+        }
+    }
+    .contentFrame {
+        width: 1024px;
+        left: 50%;
+        margin-left: -512px;
+        height: 680px;
+        .detail {
+            background: #fff;
+            .menu {
+                background: #FAFAFA;
+                height: 646px;
+                padding: 20px 0;
+                .ant-menu-vertical .ant-menu-item, .ant-menu-inline .ant-menu-item, .ant-menu-vertical .ant-menu-submenu-title, .ant-menu-inline .ant-menu-submenu-title {
+                    background: #FAFAFA;
+                }
+                .ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+                    background: #ecf6fd;
+                }
+            }
+            .detailFrame {
+                padding: 20px;
+            }
+        }
+    }
+}

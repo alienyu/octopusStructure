@@ -1,0 +1,53 @@
+{
+  "status": 200,
+  "errMsg": "frgr",
+  "data": {
+    "current": 1,
+    "total": 123,
+    "list": [{
+      "key": 1,
+      "title": "活动1活动1活动1活动1活动1活动1活动1活动1活动1活动1活动1活动1活动1活动1活动1",
+      "limitNum": 300,
+      "signUpNum": 122,
+      "status": 1,
+      "startTime": "2017-10-11 17:00",
+      "endTime": "2017-10-11 19:00",
+      "deadlineTime": "2017-10-10 17:00",
+      "createTime": "2017-10-09 13:11",
+      "active": 0
+    }, {
+      "key": 2,
+      "title": "活动1活动1",
+      "limitNum": 200,
+      "signUpNum": 145,
+      "status": 0,
+      "startTime": "2017-10-11 17:00",
+      "endTime": "2017-10-11 19:00",
+      "deadlineTime": "2017-10-10 17:00",
+      "createTime": "2017-10-09 13:11",
+      "active": 1
+    }, {
+      "key": 3,
+      "title": "活动1活动1",
+      "limitNum": 722,
+      "signUpNum": 546,
+      "status": 1,
+      "startTime": "2017-10-11 17:00",
+      "endTime": "2017-10-11 19:00",
+      "deadlineTime": "2017-10-10 17:00",
+      "createTime": "2017-10-09 13:11",
+      "active": 0
+    }, {
+      "key": 4,
+      "title": "活动1活动1",
+      "limitNum": 555,
+      "signUpNum": 124,
+      "status": 0,
+      "startTime": "2017-10-11 17:00",
+      "endTime": "2017-10-11 19:00",
+      "deadlineTime": "2017-10-10 17:00",
+      "createTime": "2017-10-09 13:11",
+      "active": 1
+    }]
+  }
+}

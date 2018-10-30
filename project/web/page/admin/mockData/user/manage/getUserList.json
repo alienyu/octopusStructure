@@ -1,0 +1,109 @@
+{
+  "status": 200,
+  "errMsg": "dgfd",
+  "data": {
+    "current": 1,
+    "total": 362,
+    "list": [{
+      "key": 1,
+      "gender": "0",
+      "name": "房东",
+      "status": "2",
+      "mobile": "13918911123",
+      "companyName": "上海资金",
+      "type": "1",
+      "registerTime": "2017-09-11 11:11:11",
+      "forbidden": true
+    }, {
+      "key": 2,
+      "gender": "1",
+      "name": "於永健",
+      "status": "3",
+      "mobile": "12312312312",
+      "companyName": "上海资金",
+      "type": "2",
+      "registerTime": "2017-09-08 12:12:15",
+      "forbidden": false
+    },{
+      "key": 3,
+      "gender": "0",
+      "name": "刘国柱",
+      "status": "1",
+      "mobile": "214354365435",
+      "companyName": "上海资金",
+      "type": "2",
+      "registerTime": "2017-07-13 07:11:11",
+      "forbidden": true
+    },{
+      "key": 4,
+      "name": "刘国柱",
+      "gender": "0",
+      "status": "2",
+      "mobile": "214354365435",
+      "companyName": "上海资金",
+      "type": "1",
+      "registerTime": "2017-07-13 07:11:11",
+      "forbidden": true
+    },{
+      "key": 5,
+      "name": "刘国柱",
+      "status": "2",
+      "companyName": "上海资金",
+      "gender": "1",
+      "mobile": "214354365435",
+      "type": "1",
+      "registerTime": "2017-07-13 07:11:11"
+    },{
+      "key": 6,
+      "loginName": "liuguozhu",
+      "name": "刘国柱",
+      "status": "2",
+      "gender": "0",
+      "mobile": "214354365435",
+      "companyName": "上海资金",
+      "type": "1",
+      "registerTime": "2017-07-13 07:11:11",
+      "forbidden": true
+    },{
+      "key": 7,
+      "name": "刘国柱",
+      "status": "2",
+      "gender": "0",
+      "mobile": "214354365435",
+      "companyName": "上海资金",
+      "type": "1",
+      "registerTime": "2017-07-13 07:11:11",
+      "forbidden": true
+    },{
+      "key": 8,
+      "name": "刘国柱",
+      "gender": "0",
+      "status": "2",
+      "mobile": "214354365435",
+      "companyName": "上海资金",
+      "type": "2",
+      "registerTime": "2017-07-13 07:11:11",
+      "forbidden": false
+    },{
+      "key": 9,
+      "name": "刘国柱",
+      "status": "2",
+      "mobile": "214354365435",
+      "gender": "1",
+      "companyName": "上海资金",
+      "type": "2",
+      "registerTime": "2017-07-13 07:11:11",
+      "forbidden": true
+    },{
+      "key": 10,
+      "name": "刘国柱",
+      "gender": "0",
+      "status": "2",
+      "mobile": "214354365435",
+      "companyName": "上海资金",
+      "type": "1",
+      "registerTime": "2017-07-13 07:11:11",
+      "forbidden": true
+    }]
+  }
+}

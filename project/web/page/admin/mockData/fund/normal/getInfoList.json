@@ -1,0 +1,114 @@
+{
+  "status": 200,
+  "errMsg": "",
+  "data": {
+    "pageNum": 1,
+    "pageSize": 5,
+    "size": 5,
+    "startRow": 0,
+    "endRow": 4,
+    "total": 5,
+    "pages": 1,
+    "list": [
+      {
+        "key": 7,
+        "category": 1,
+        "investmentTypeStr": "金融股权质押融资,股票质押融资",
+        "title": "提交普通资金标题",
+        "audit": {
+          "status": 1,
+          "comment": null
+        },
+        "progress": 1,
+        "userType": 2,
+        "publisher": {
+          "id": 2,
+          "name": "赵跃"
+        },
+        "publisherTime": "2018-04-06 22:55"
+      },
+      {
+        "key": 6,
+        "category": 1,
+        "investmentTypeStr": "金融股权质押融资,股票质押融资",
+        "title": "普通资金42442标题",
+        "audit": {
+          "status": 4,
+          "comment": null
+        },
+        "progress": 1,
+        "userType": 2,
+        "publisher": {
+          "id": 2,
+          "name": "赵跃"
+        },
+        "publisherTime": "2018-04-06 22:52"
+      },
+      {
+        "key": 5,
+        "category": 1,
+        "investmentTypeStr": "房地产抵押融资,金融股权质押融资,股票质押融资",
+        "title": "普通资金标题",
+        "audit": {
+          "status": 4,
+          "comment": null
+        },
+        "progress": 1,
+        "userType": 2,
+        "publisher": {
+          "id": 2,
+          "name": "赵跃"
+        },
+        "publisherTime": "2018-04-06 22:46"
+      },
+      {
+        "key": 3,
+        "category": 1,
+        "investmentTypeStr": "金融股权质押融资,股票质押融资,应收款质押融资(保理)",
+        "title": "普资金11111",
+        "audit": {
+          "status": 3,
+          "comment": "审核通过"
+        },
+        "progress": 1,
+        "userType": 2,
+        "publisher": {
+          "id": 2,
+          "name": "赵跃"
+        },
+        "publisherTime": "2018-04-05 21:09"
+      },
+      {
+        "key": 1,
+        "category": 1,
+        "investmentTypeStr": "金融股权质押融资,股票质押融资,应收款质押融资(保理)",
+        "title": "普通资金",
+        "audit": {
+          "status": 3,
+          "comment": "审核通过"
+        },
+        "progress": 2,
+        "userType": 2,
+        "publisher": {
+          "id": 2,
+          "name": "赵跃"
+        },
+        "publisherTime": "2017-09-27 23:50"
+      }
+    ],
+    "prePage": 0,
+    "nextPage": 0,
+    "isFirstPage": true,
+    "isLastPage": true,
+    "hasPreviousPage": false,
+    "hasNextPage": false,
+    "navigatePages": 8,
+    "navigatepageNums": [
+      1
+    ],
+    "navigateFirstPage": 1,
+    "navigateLastPage": 1,
+    "firstPage": 1,
+    "lastPage": 1
+  }
+}
