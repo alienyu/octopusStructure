@@ -1,6 +1,0 @@
-{
-    "pageList": [
-        "biz"
-    ],
-    "vendorConf": ["vue", "vue-router", "vue-resource", "vuex", "vant"]
-}

@@ -1,7 +1,7 @@
 {
-  "projectName": "demo",
+  "projectName": "octopus",
   "deployContent": {
-    "web": [],
-    "mobile": []
-  }
+    "web": []
+  },
+  "mode": ""
 }
