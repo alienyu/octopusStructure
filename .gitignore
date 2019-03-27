@@ -1,4 +1,4 @@
 .idea/
 node_modules/
-demo-output
+octopus-output
 build/config/devConfig.json
