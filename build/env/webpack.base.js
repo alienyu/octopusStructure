@@ -29,9 +29,7 @@ var baseConf = {
                 use: {
                     loader: 'babel-loader',
                     options: {
-                        cacheDirectory: true,
-                        presets: ['env'],
-                        plugins: ['transform-runtime']
+                        cacheDirectory: true
                     }
                 }
             },
@@ -45,9 +43,7 @@ var baseConf = {
                 use: {
                     loader: 'babel-loader',
                     options: {
-                        cacheDirectory: true,
-                        presets: ['env'],
-                        plugins: ['transform-runtime']
+                        cacheDirectory: true
                     }
                 }
             }, {
@@ -57,7 +53,6 @@ var baseConf = {
                     {
                         loader: MiniCssExtractPlugin.loader
                     },
-                    "style-loader",
                     "css-loader"
                 ]
             }, {

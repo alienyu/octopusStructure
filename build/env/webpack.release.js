@@ -5,7 +5,7 @@ let merge = require("webpack-merge");
 let releaseConf = require("../config/releaseConfig.json");
 let projectName = releaseConf.projectName;
 let HtmlWebpackPlugin = require('html-webpack-plugin');
-let projectConf = require(`${process.cwd()}/biz/webpackConfig.project.js`)(releaseConf);
+let projectConf = require(`${process.cwd()}/biz/webpack.project.js`)(releaseConf);
 console.log("this is release")
 
 let envConf = merge(projectConf, {

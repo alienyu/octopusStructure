@@ -1,0 +1,19 @@
+{
+  "presets": [
+    "env",
+    "react-native-stage-0/decorator-support"
+  ],
+  "plugins": [
+    "transform-runtime",
+    "transform-object-assign",
+    [
+      "import",
+      {
+        "libraryName": "antd",
+        "libraryDirectory": "es",
+        "style": "css"
+      }
+    ]
+  ],
+  "comments": false
+}

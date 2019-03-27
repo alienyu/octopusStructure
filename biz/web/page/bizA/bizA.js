@@ -1,8 +1,19 @@
-require("./biz.less");
+require("./bizA.less");
 import React from 'react'
 import { render } from 'react-dom'
-import { Router, Route, hashHistory, IndexRoute, IndexRedirect} from 'react-router';
+import { HashRouter, Route } from 'react-router-dom';
 import 'antd/dist/antd.css'
-import rootRoute from "./routes/router.js"
-webBizMask.init();
-render((<Router history={hashHistory} routes={rootRoute} />), document.getElementById("app"))
+import Second from './routes/second/second.jsx'
+
+function home() {
+    return <h2>home page</h2>
+}
+
+
+render(
+    <HashRouter>
+        <Route path="/" exact component={home}></Route>
+        <Route path="/second/:id" component={Second}></Route>
+
+    </HashRouter>
+, document.getElementById("app"))
