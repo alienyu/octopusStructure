@@ -1,6 +1,6 @@
 let webpack = require('webpack');
 let path =require("path");
-console.log("this is bizA page")
+console.log("this is bizB page")
 module.exports = {
     resolve: {
         alias: {

@@ -1,4 +1,4 @@
-require("./bizA.less");
+require("./bizB.less");
 import React from 'react'
 import { render } from 'react-dom'
 import 'antd/dist/antd.css'
