@@ -1,6 +1,7 @@
 import React,{Component} from 'react'
 import { hashHistory} from 'react-router';
 import { message } from 'antd';
+import ajaxLoadingStore from 'web-bizA-mobx/loadingMask';
 
 let env = process.env.NODE_ENV;
 let perConf = env == "production" ? require(`buildConf/releaseConfig.json`) : require(`buildConf/devConfig.json`);
@@ -13,10 +14,9 @@ module.exports = (ops) => {
         callback: function() {}
     }, ops);
     if(config.url.match(/^\//)) {config.url = config.url.substr(1, config.url.length)}
-    webBizMask.showMask();
+    ajaxLoadingStore.changeStatus(true);
     if(mode == "local") {
-        webBizMask.hideMask();
-        var data = require(`web-biz-mock/${config.url}.json`);
+        var data = require(`web-bizA-mock/${config.url}.json`);
         setTimeout(() => {
             var consoleData = {
                 requestUrl: config.url,
@@ -24,8 +24,9 @@ module.exports = (ops) => {
                 responseData: data.data
             }
             console.log(consoleData)
+            ajaxLoadingStore.changeStatus(false);
             config.callback.call(this, data.data);
-        },200)
+        },2000)
     } else {
         $.ajax({
             url: "/pc/" + config.url,
@@ -34,7 +35,7 @@ module.exports = (ops) => {
             contentType: "application/json; charset=utf-8",
             data: JSON.stringify(config.data),
             success: function(data) {
-                webBizMask.hideMask();
+                ajaxLoadingStore.changeStatus(false);
                 if(config.handlerErr) {
                     config.callback.call(this, data);
                 } else {

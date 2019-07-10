@@ -4,9 +4,9 @@ import { Layout } from 'antd';
 const { Header, Footer, Sider, Content } = Layout;
 import Home from './routes/home';
 import Login from './routes/login';
-import BizAHeader from 'headerCmp';
-import BizAFooter from 'footerCmp';
-import BizAMenuBar from 'menuBarCmp';
+import BizAHeader from 'web-bizA-headerCmp';
+import BizAFooter from 'web-bizA-footerCmp';
+import BizAMenuBar from 'web-bizA-menuBarCmp';
 
 export default class App extends React.Component {
     render() {

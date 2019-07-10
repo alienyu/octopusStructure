@@ -6,6 +6,12 @@ const WrapperLoginCmp = styled.div`
     .pageFrame {
         height: 100%;
         text-align: center;
+        .login-form {
+            width: 500px;
+            .login-form-button {
+                width: 100%;
+            }
+        }
     }
 `;
 

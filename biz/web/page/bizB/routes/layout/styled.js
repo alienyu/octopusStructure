@@ -4,6 +4,9 @@ import styled from 'styled-components'
 var WrapperHeaderCmp = styled.div`
     font-size: 18px;
     color: #fff;
+    .userName {
+        cursor: pointer;
+    }
 `;
 
 var WrapperFooterCmp = styled.div`

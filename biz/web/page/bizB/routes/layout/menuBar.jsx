@@ -2,7 +2,7 @@ import React,{Component} from 'react'
 import { hashHistory } from 'react-router-dom';
 import { Layout, Menu, Icon } from 'antd';
 const { SubMenu } = Menu;
-import Constants from 'Constants';
+import Constants from 'web-bizB-Constants';
 const { menuItems } = Constants;
 import { get } from 'lodash';
 
@@ -36,7 +36,7 @@ export default class MenuBar extends React.Component {
 
     componentWillMount() {
         let openKeys = [get(location.pathname.match(/web\/(\w+)/), '1')];
-        let selectedKeys = [`${openKeys}-${get(location.hash.match(/#\/(\w+)/), '1', 'index')}`];
+        let selectedKeys = [`${openKeys}-${get(location.hash.match(/#(\w+)/), '1', 'index')}`];
         this.setState({
             openKeys,
             selectedKeys

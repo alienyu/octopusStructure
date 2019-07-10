@@ -5,12 +5,12 @@ export default {
       "name": "bizA",
       "children": [
         {
-          "key": "index",
+          "key": "bizA-index",
           "name": "Index",
           "url": "/web/bizA/bizA.html#"
         },
         {
-          "key": "login",
+          "key": "bizA-login",
           "name": "Login",
           "url": "/web/bizA/bizA.html#login"
         }
@@ -21,12 +21,12 @@ export default {
       "name": "bizB",
       "children": [
         {
-          "key": "index",
+          "key": "bizB-index",
           "name": "Index",
           "url": "/web/bizB/bizB.html#"
         },
         {
-          "key": "login",
+          "key": "bizB-login",
           "name": "Login",
           "url": "/web/bizB/bizB.html#login"
         }

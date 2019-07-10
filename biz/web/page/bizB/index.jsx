@@ -4,17 +4,17 @@ import { Layout } from 'antd';
 const { Header, Footer, Sider, Content } = Layout;
 import Home from './routes/home';
 import Login from './routes/login';
-import BizAHeader from 'headerCmp';
-import BizAFooter from 'footerCmp';
-import BizAMenuBar from 'menuBarCmp';
+import BizBHeader from 'web-bizB-headerCmp';
+import BizBFooter from 'web-bizB-footerCmp';
+import BizBMenuBar from 'web-bizB-menuBarCmp';
 
 export default class App extends React.Component {
     render() {
         return (
             <Layout>
-                <Header><BizAHeader /></Header>
+                <Header><BizBHeader /></Header>
                 <Layout>
-                    <Sider><BizAMenuBar /></Sider>
+                    <Sider><BizBMenuBar /></Sider>
                     <Content style={{ height: 'calc(100vh - 156px)' }}>
                         <HashRouter>
                             <Route exact path="/" component={Home} />
@@ -22,7 +22,7 @@ export default class App extends React.Component {
                         </HashRouter>
                     </Content>
                 </Layout>
-                <Footer style={{background: '#d8d9da'}}><BizAFooter /></Footer>
+                <Footer style={{background: '#d8d9da'}}><BizBFooter /></Footer>
             </Layout>
         );
     }
