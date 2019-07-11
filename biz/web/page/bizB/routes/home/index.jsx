@@ -7,7 +7,7 @@ export default class Home extends React.Component {
         return (
             <WrapperHomeCmp>
                 <Row type="flex" justify="center" align="middle" className="pageFrame">
-                    <Col span={18}>This is home page of BizB</Col>
+                    <Col span={18}>{intl.get('home.content')}</Col>
                 </Row>
             </WrapperHomeCmp>
         );

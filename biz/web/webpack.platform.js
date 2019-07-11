@@ -1,4 +1,4 @@
-let path =require("path");
+let path = require("path");
 
 function loadPlatformConf(envConf) {
     let webpack = require('webpack');
@@ -20,7 +20,8 @@ function loadPlatformConf(envConf) {
                 'web-Constants': `${path.resolve(__dirname, 'page/common/static/Constants.js')}`,
                 'web-ajax': `${path.resolve(__dirname, 'page/common/static/module/ajax.js')}`,
                 'web-mock': `${path.resolve(__dirname, 'page/common/mockData')}`,
-                'web-mobx': `${path.resolve(__dirname, 'page/common/mobx')}`
+                'web-mobx': `${path.resolve(__dirname, 'page/common/mobx')}`,
+                'web-locales': `${path.resolve(__dirname, 'page/common/static/locales')}`
             }
         },
         plugins: [

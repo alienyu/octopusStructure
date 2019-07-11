@@ -6,7 +6,8 @@ module.exports = {
         alias: {
             'web-bizB-components': `${path.resolve(__dirname, 'components')}`,
             'web-bizB-mock': `${path.resolve(__dirname, 'mockData')}`,
-            'web-bizB-mobx': `${path.resolve(__dirname, 'mobx')}`
+            'web-bizB-mobx': `${path.resolve(__dirname, 'mobx')}`,
+            'web-bizB-locales': `${path.resolve(__dirname, 'locales')}`
         }
     }
 }

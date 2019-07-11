@@ -32,5 +32,12 @@ export default {
         }
       ]
     }
-  ]
+  ],
+  supportedLang: [{
+    name: 'English',
+    value: 'en'
+  }, {
+    name: '简体中文',
+    value: 'cn'
+  }]
 }

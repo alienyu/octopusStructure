@@ -3,6 +3,7 @@ let webpack = require('webpack');
 let env = process.env.NODE_ENV;
 let deployContent = !env ? require("../config/devConfig.json")["deployContent"] : require("../config/releaseConfig.json")["deployContent"];
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 var baseConf = {
     output: {
@@ -12,7 +13,9 @@ var baseConf = {
     plugins: [
         new MiniCssExtractPlugin('[name].css'), //单独使用link标签加载css并设置路径，相对于output配置中的publicePath
 
-        new webpack.HotModuleReplacementPlugin() //热加载
+        new webpack.HotModuleReplacementPlugin(), //热加载
+
+        new BundleAnalyzerPlugin({ analyzerPort: 8919 })
     ],
     resolve: {
         extensions: ['.js', '.vue', '.jsx'],

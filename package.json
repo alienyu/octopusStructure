@@ -45,6 +45,7 @@
     "moment": "^2.24.0",
     "react": "^16.8.5",
     "react-dom": "^16.8.5",
+    "react-intl-universal": "^2.1.1",
     "react-router-dom": "^5.0.0",
     "style-loader": "^0.23.1",
     "styled-components": "^4.2.0",
@@ -56,5 +57,7 @@
   },
   "author": "AlienYu",
   "license": "MIT",
-  "devDependencies": {}
+  "devDependencies": {
+    "webpack-bundle-analyzer": "^3.3.2"
+  }
 }
