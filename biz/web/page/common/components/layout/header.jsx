@@ -2,7 +2,7 @@ import * as React from 'react'
 import { observer } from 'mobx-react';
 import { WrapperHeaderCmp } from './styled'
 import { Popconfirm, Row, Col } from 'antd';
-import userStore from 'web-bizA-mobx/userInfo';
+import userStore from 'web-mobx/userInfo';
 
 @observer
 export default class Header extends React.Component {

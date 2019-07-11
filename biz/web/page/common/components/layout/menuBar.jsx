@@ -2,7 +2,7 @@ import React,{Component} from 'react'
 import { hashHistory } from 'react-router-dom';
 import { Layout, Menu, Icon } from 'antd';
 const { SubMenu } = Menu;
-import Constants from 'web-bizB-Constants';
+import Constants from 'web-Constants';
 const { menuItems } = Constants;
 import { get } from 'lodash';
 

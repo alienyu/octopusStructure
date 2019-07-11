@@ -1,7 +1,7 @@
 import React,{Component} from 'react'
 import { hashHistory} from 'react-router';
 import { message } from 'antd';
-import ajaxLoadingStore from 'web-bizA-mobx/loadingMask';
+import ajaxLoadingStore from 'web-mobx/loadingMask';
 
 let env = process.env.NODE_ENV;
 let perConf = env == "production" ? require(`buildConf/releaseConfig.json`) : require(`buildConf/devConfig.json`);
@@ -16,7 +16,7 @@ module.exports = (ops) => {
     if(config.url.match(/^\//)) {config.url = config.url.substr(1, config.url.length)}
     ajaxLoadingStore.changeStatus(true);
     if(mode == "local") {
-        var data = require(`web-bizA-mock/${config.url}.json`);
+        var data = require(`web-mock/${config.url}.json`);
         setTimeout(() => {
             var consoleData = {
                 requestUrl: config.url,

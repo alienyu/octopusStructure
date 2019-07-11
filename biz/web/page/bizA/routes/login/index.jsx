@@ -2,8 +2,8 @@ import React from "react";
 import { Row, Col, Form, Icon, Input, Button, Checkbox } from 'antd';
 import { observer } from 'mobx-react';
 import { WrapperLoginCmp } from './styled';
-import userInfoStore from 'web-bizA-mobx/userInfo';
-import loadingStore from 'web-bizA-mobx/loadingMask';
+import userInfoStore from 'web-mobx/userInfo';
+import loadingStore from 'web-mobx/loadingMask';
 
 @observer
 class NormalLoginForm extends React.Component {
@@ -11,7 +11,7 @@ class NormalLoginForm extends React.Component {
         e.preventDefault();
         this.props.form.validateFields((err, values) => {
             if (!err) {
-                webBizAAjax({
+                webAjax({
                     url: "/login",
                     data: values,
                     callback(data) {
