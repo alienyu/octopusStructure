@@ -19,7 +19,7 @@ By the way, I put the tree symbol in the right bottom of the picture because act
 
 With so much technology issues have been discussed, I wanna recommend the front-end framework base on the above discussed content. The framework diagram is shown as followed:
 
-##2.Octopus Structure Preliminary Design
+## 2.Octopus Structure Preliminary Design
 
 ![OctopusStructurePreliminaryDesign](./readmeImg/OctopusStructurePreliminaryDesign.jpg)
 
