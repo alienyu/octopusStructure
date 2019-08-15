@@ -2,8 +2,8 @@ import React from "react";
 import { Row, Col, Form, Icon, Input, Button, Checkbox } from 'antd';
 import { observer } from 'mobx-react';
 import { WrapperLoginCmp } from './styled';
-import userInfoStore from 'web-bizA-mobx/userInfo';
-import loadingStore from 'web-bizA-mobx/loadingMask';
+import userInfoStore from 'web-mobx/userInfo';
+import loadingStore from 'web-mobx/loadingMask';
 
 @observer
 class NormalLoginForm extends React.Component {
@@ -11,7 +11,7 @@ class NormalLoginForm extends React.Component {
         e.preventDefault();
         this.props.form.validateFields((err, values) => {
             if (!err) {
-                webBizAAjax({
+                webAjax({
                     url: "/login",
                     data: values,
                     callback(data) {
@@ -28,11 +28,11 @@ class NormalLoginForm extends React.Component {
             <WrapperLoginCmp>
                 <Row type="flex" justify="center" align="middle" className="pageFrame">
                     {userInfoStore.userInfo.token ?
-                        <Row>You have been logon</Row> :
+                        <Row>{intl.get('login.loginStatusText')}</Row> :
                         <Form onSubmit={this.handleSubmit} className="login-form">
                             <Form.Item>
                                 {getFieldDecorator('userName', {
-                                    rules: [{ required: true, message: 'Please input your username!' }],
+                                    rules: [{ required: true, message: intl.get('login.form.valid.userName.empty') }],
                                 })(
                                     <Input
                                         prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}
@@ -52,7 +52,7 @@ class NormalLoginForm extends React.Component {
                                 )}
                             </Form.Item>
                             <Form.Item>
-                                <Button type="primary" htmlType="submit" className="login-form-button" disabled={loadingStore.status}>{loadingStore.status ? 'Logging...' : 'Log In'}</Button>
+                                <Button type="primary" htmlType="submit" className="login-form-button" disabled={loadingStore.status}>{loadingStore.status ? intl.get('login.button.logging') : intl.get('login.button.login')}</Button>
                             </Form.Item>
                         </Form>
                     }

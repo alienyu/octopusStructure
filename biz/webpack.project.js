@@ -23,6 +23,7 @@ function loadProjectConf(envConf) {
         },
         plugins: [
             new webpack.ProvidePlugin({
+                intl: 'react-intl-universal'
             })
         ]
     }, platformConf);
