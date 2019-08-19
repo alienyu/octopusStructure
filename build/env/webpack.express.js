@@ -1,34 +1,27 @@
 let path = require('path');
 let webpack = require('webpack');
+let env = process.env.NODE_ENV;
 let merge = require("webpack-merge");
 let devConf = require("../config/devConfig.json");
 let projectName = devConf.projectName;
 let HtmlWebpackPlugin = require('html-webpack-plugin');
 let projectConf = require(`${process.cwd()}/biz/webpack.project.js`)(devConf);
-console.log("this is dev")
+console.log("this is release")
 
 let envConf = merge(projectConf, {
     mode: 'development',
     output: {
-        path: process.cwd(), //输出目录的配置，模板、样式、脚本、图片等资源的路径配置都相对于它
-        publicPath: "/" //模板、样式、脚本、图片等资源对应的server上的路径
+        path: `${process.cwd()}/${projectName}-output/`, //输出目录的配置，模板、样式、脚本、图片等资源的路径配置都相对于它
+        publicPath: '/'               //模板、样式、脚本、图片等资源对应的server上的路径
     },
-    devtool: "source-map",
-    //使用webpack-dev-server，提高开发效率
-    devServer: {
-        contentBase: './',
-        host: "localhost",
-        port: devConf.port || 7777, //默认8080
-        inline: true, //可以监控js变化```
-        hot: true, //热启动
-        proxy: {
-            '*': {
-                target: devConf.proxyServer,
-                changeOrigin: true,
-                secure: false
+    plugins: [
+        new webpack.DefinePlugin({
+            'process.env': {
+                'NODE_ENV': '"production"'
             }
-        }
-    }
+        })
+    ],
+    devtool: "source-map"
 });
 
 function runtime(conf) {
@@ -37,14 +30,13 @@ function runtime(conf) {
     let pageArr = page.split("/"); //["pagePathA", "pagePathB", "pageName"]
     let htmlName = pageArr.pop(); //实际单页文件入口html(pageName)
     let pagePath = pageArr.length > 0 ? pageArr.join("/") : ""; //页面路径(pagePathA/pagePathB)
-    var entryID = `${platform}/${pagePath}${htmlName}/${htmlName}`; // projectName/platform/pagePath/pageName
+    var entryID = `${platform}/${pagePath}${htmlName}/${htmlName}`; // platform/pagePath/pageName
     var fileRoute = `${process.cwd()}/biz/${platform}/page/${pagePath}${htmlName}`; //biz/platform/page/pagePath/pageName
     //将公共模块与页面入口模块合并为一个模块
-    envConf.entry[entryID] = [`${fileRoute}/${htmlName}.js`].concat(getPageVendorConf({
+    envConf.entry[entryID] = [`${fileRoute}/${htmlName}.js`, 'webpack-hot-middleware/client'].concat(getPageVendorConf({
         platform,
         page
-    })); 
-    //biz/platform/page/pagePath/pageName.js
+    }));     //biz/platform/page/pagePath/pageName.js
     envConf.plugins.push(new HtmlWebpackPlugin({
         //根据模板插入css/js等生成最终HTML
         filename: entryID + ".html",
@@ -88,4 +80,5 @@ function loadConfig() {
 }
 
 loadConfig();
+
 module.exports = envConf;

@@ -6,6 +6,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 var baseConf = {
+    cache: true,
     output: {
         filename: '[name].js',           //每个页面对应的主js的生成配置
         chunkFilename: '[name].[chunkhash].chunk.js'   //chunk生成的配置
@@ -15,7 +16,7 @@ var baseConf = {
 
         new webpack.HotModuleReplacementPlugin(), //热加载
 
-        new BundleAnalyzerPlugin({ analyzerPort: 8919 })
+        // new BundleAnalyzerPlugin({ analyzerPort: 8919 })
     ],
     resolve: {
         extensions: ['.js', '.vue', '.jsx'],

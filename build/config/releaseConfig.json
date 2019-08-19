@@ -1,7 +1,7 @@
 {
   "projectName": "octopus",
   "deployContent": {
-    "web": []
+    "web": ["bizA"]
   },
   "mode": ""
 }
