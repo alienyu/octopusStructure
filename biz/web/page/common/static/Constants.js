@@ -7,12 +7,12 @@ export default {
         {
           "key": "bizA-index",
           "name": "Index",
-          "url": "/web/bizA/bizA.html#"
+          "url": "/web/bizA/"
         },
         {
           "key": "bizA-login",
           "name": "Login",
-          "url": "/web/bizA/bizA.html#login"
+          "url": "/web/bizA/login"
         }
       ]
     },
@@ -23,12 +23,17 @@ export default {
         {
           "key": "bizB-index",
           "name": "Index",
-          "url": "/web/bizB/bizB.html#"
+          "url": "/web/bizB/"
         },
         {
           "key": "bizB-login",
           "name": "Login",
-          "url": "/web/bizB/bizB.html#login"
+          "url": "/web/bizB/login"
+        },
+        {
+          "key": "bizB-noLayout",
+          "name": "noLayout",
+          "url": "/web/bizB/noLayout"
         }
       ]
     }

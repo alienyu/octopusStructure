@@ -9,5 +9,11 @@
 </head>
 <body>
 <div id="app"></div>
+<script>
+        window.dc = {
+            pl: "<%= htmlWebpackPlugin.options.deployConf.platform %>",
+            pg: "<%= htmlWebpackPlugin.options.deployConf.page %>"
+        }
+    </script>
 </body>
 </html>

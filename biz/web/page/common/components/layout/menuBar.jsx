@@ -1,12 +1,13 @@
-import React,{Component} from 'react'
-import { hashHistory } from 'react-router-dom';
+import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
 import { Layout, Menu, Icon } from 'antd';
 const { SubMenu } = Menu;
 import Constants from 'web-Constants';
 const { menuItems } = Constants;
 import { get } from 'lodash';
 
-export default class MenuBar extends React.Component {
+@withRouter
+export default class MenuBar extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -31,12 +32,20 @@ export default class MenuBar extends React.Component {
 
     menuChange(e) {
         this.setState({selectedKeys: [e.key]});
-        location.href = e.item.props.url;
+        //跨页面跳转
+        if(!e.item.props.url.match(window.dc.pg)) {
+            location.href = e.item.props.url;
+        } else {
+            //单页路由跳转
+            console.log(111)
+            this.props.history.push(e.item.props.url);
+        }
     }
 
     componentWillMount() {
         let openKeys = [get(location.pathname.match(/web\/(\w+)/), '1')];
-        let selectedKeys = [`${openKeys}-${get(location.hash.match(/#(\w+)/), '1', 'index')}`];
+        let regText = new RegExp(`web\/${openKeys}\/(\\w+)`);
+        let selectedKeys = [`${openKeys}-${get(location.pathname.match(regText), '1', 'index')}`];
         this.setState({
             openKeys,
             selectedKeys

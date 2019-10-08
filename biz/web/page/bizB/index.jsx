@@ -1,14 +1,12 @@
 import React from "react";
 import { observer } from 'mobx-react';
-import { HashRouter, Route } from 'react-router-dom';
-import { Layout } from 'antd';
-const { Header, Footer, Sider, Content } = Layout;
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { LocaleProvider } from 'antd';
+
+import Layout from './routes/layout';
+import NoLayout from './routes/noLayout';
+import zh_CN from 'antd/lib/locale-provider/zh_CN';
 import locales from 'web-bizB-locales';
-import Home from './routes/home';
-import Login from './routes/login';
-import WebHeader from 'web-headerCmp';
-import WebFooter from 'web-footerCmp';
-import WebMenuBar from 'web-menuBarCmp';
 import langStore from 'web-mobx/lang';
 
 @observer
@@ -20,19 +18,14 @@ export default class App extends React.Component {
         })
 
         return (
-            <Layout>
-                <Header><WebHeader /></Header>
-                <Layout>
-                    <Sider><WebMenuBar /></Sider>
-                    <Content style={{ height: 'calc(100vh - 156px)' }}>
-                        <HashRouter>
-                            <Route exact path="/" component={Home} />
-                            <Route path="/login" component={Login} />
-                        </HashRouter>
-                    </Content>
-                </Layout>
-                <Footer style={{ background: '#d8d9da' }}><WebFooter /></Footer>
-            </Layout >
+            <LocaleProvider locale={langStore.currentLang == 'cn' ? zh_CN : null}>
+                <Router>
+                    <Switch>
+                        <Route path="/web/bizB/noLayout" component={NoLayout} />
+                        <Route path="/web/bizB/" component={Layout} />
+                    </Switch>
+                </Router>
+            </LocaleProvider>
         );
     }
 }

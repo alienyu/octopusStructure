@@ -21,13 +21,17 @@ let envConf = merge(projectConf, {
         port: devConf.port || 7777, //默认8080
         inline: true, //可以监控js变化```
         hot: true, //热启动
-        proxy: {
-            '*': {
-                target: devConf.proxyServer,
-                changeOrigin: true,
-                secure: false
-            }
-        }
+        historyApiFallback: {
+            disableDotRule: true,
+            rewrites: []
+        },
+        // proxy: {
+        //     '*': {
+        //         target: devConf.proxyServer,
+        //         changeOrigin: true,
+        //         secure: false
+        //     }
+        // }
     }
 });
 
@@ -43,13 +47,17 @@ function runtime(conf) {
     envConf.entry[entryID] = [`${fileRoute}/${htmlName}.js`].concat(getPageVendorConf({
         platform,
         page
-    })); 
+    }));
     //biz/platform/page/pagePath/pageName.js
     envConf.plugins.push(new HtmlWebpackPlugin({
         //根据模板插入css/js等生成最终HTML
-        filename: entryID + ".html",
+        filename: `${platform}/${pagePath}${htmlName}/index.html`,
         //生成的html存放路径，相对于path
-        template: `${fileRoute}/${htmlName}.html`,
+        template: `${fileRoute}/${htmlName}.ejs`,
+        deployConf: {
+            platform,
+            page
+        },
         favicon: `${process.cwd()}/biz/common/static/imgs/favicon.png`,
         //js插入的位置，true/'head'/'body'/false
         inject: 'body',
@@ -60,6 +68,13 @@ function runtime(conf) {
             collapseWhitespace: false //删除空白符与换行符
         }
     }));
+
+    //load historyApiFallback rewrites
+    let rewriteItem = {
+        from: new RegExp(`${platform}\/${page}`),
+        to: `/${platform}/${page}/index.html`
+    };
+    envConf.devServer.historyApiFallback.rewrites.push(rewriteItem);
 }
 
 function getPageVendorConf(conf) {
@@ -88,4 +103,5 @@ function loadConfig() {
 }
 
 loadConfig();
+console.log(envConf.devServer.historyApiFallback.rewrites)
 module.exports = envConf;

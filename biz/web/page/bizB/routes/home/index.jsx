@@ -1,5 +1,5 @@
 import React from "react";
-import { Row, Col } from 'antd';
+import { Row, Col, Button } from 'antd';
 import { WrapperHomeCmp } from './styled';
 
 export default class Home extends React.Component {
@@ -9,6 +9,7 @@ export default class Home extends React.Component {
                 <Row type="flex" justify="center" align="middle" className="pageFrame">
                     <Col span={18}>{intl.get('home.content')}</Col>
                 </Row>
+                <Button onClick={() => {this.props.history.push("/web/bizB/noLoayout")}}>Go To noLayou</Button>
             </WrapperHomeCmp>
         );
     }

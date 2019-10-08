@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { withRouter } from 'react-router-dom';
 import { observer } from 'mobx-react';
 import { WrapperHeaderCmp } from './styled'
 import { Popconfirm, Row, Col, Select } from 'antd';
@@ -9,6 +10,7 @@ import Constants from 'web-Constants';
 const { supportedLang } = Constants;
 
 @observer
+@withRouter
 export default class Header extends React.Component {
     constructor(props) {
         super(props);
@@ -16,7 +18,7 @@ export default class Header extends React.Component {
 
     logout() {
         userStore.clearUserInfo();
-        location.hash = "login";
+        this.props.history.push(`/web/${window.dc.pg}/login`);
     }
 
     changeLang(val) {
