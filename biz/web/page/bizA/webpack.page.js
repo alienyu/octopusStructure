@@ -7,7 +7,8 @@ module.exports = {
             'web-bizA-components': `${path.resolve(__dirname, 'components')}`,
             'web-bizA-mock': `${path.resolve(__dirname, 'mockData')}`,
             'web-bizA-mobx': `${path.resolve(__dirname, 'mobx')}`,
-            'web-bizA-locales': `${path.resolve(__dirname, 'locales')}`
+            'web-bizA-locales': `${path.resolve(__dirname, 'locales')}`,
+            'web-bizA-routes': `${path.resolve(__dirname, 'routes.js')}`
         }
     }
 }

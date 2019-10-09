@@ -9,7 +9,7 @@ import WebFooter from 'web-footerCmp';
 import Home from './routes/home';
 import Login from './routes/login';
 import SubRouter from './routes/subRouter';
-
+import routes from "web-bizA-routes";
 import zh_CN from 'antd/lib/locale-provider/zh_CN';
 import locales from 'web-bizA-locales';
 import langStore from 'web-mobx/lang';
@@ -31,9 +31,18 @@ export default class App extends React.Component {
                             <Sider><WebMenuBar /></Sider>
                             <Content style={{ height: 'calc(100vh - 156px)' }}>
                                 <Switch>
-                                    <Route path="/" exact component={Home} />
+                                    {/* <Route path="/" exact component={Home} />
                                     <Route path="/login" component={Login} />
-                                    <Route path="/subRouter" component={SubRouter} />
+                                    <Route path="/subRouter" component={SubRouter} /> */}
+                                    {
+                                        routes.map((value, key) => {
+                                            return <Route path={value.path} key={key} exact={value.exact} render={
+                                                props => 
+                                                    (<value.component {...props} routes={value.routes} />
+                                                )} 
+                                            />
+                                        })
+                                    }
                                 </Switch>
                             </Content>
                         </Layout>
