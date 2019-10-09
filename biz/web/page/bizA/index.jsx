@@ -8,6 +8,7 @@ import WebMenuBar from 'web-menuBarCmp';
 import WebFooter from 'web-footerCmp';
 import Home from './routes/home';
 import Login from './routes/login';
+import SubRouter from './routes/subRouter';
 
 import zh_CN from 'antd/lib/locale-provider/zh_CN';
 import locales from 'web-bizA-locales';
@@ -32,6 +33,7 @@ export default class App extends React.Component {
                                 <Switch>
                                     <Route path="/" exact component={Home} />
                                     <Route path="/login" component={Login} />
+                                    <Route path="/subRouter" component={SubRouter} />
                                 </Switch>
                             </Content>
                         </Layout>

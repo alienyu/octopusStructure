@@ -18,7 +18,7 @@ export default class Header extends React.Component {
 
     logout() {
         userStore.clearUserInfo();
-        this.props.history.push(`/web/${window.dc.pg}/login`);
+        this.props.history.push('/login');
     }
 
     changeLang(val) {

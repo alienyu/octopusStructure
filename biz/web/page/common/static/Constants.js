@@ -7,14 +7,29 @@ export default {
         {
           "key": "index",
           "name": "Index",
-          "url": "",
+          "url": "/",
           "wholeUrl": "/web/bizA/"
         },
         {
           "key": "login",
           "name": "Login",
-          "url": "login",
+          "url": "/login",
           "wholeUrl": "/web/bizA/login"
+        },
+        {
+          "key": "subRouter",
+          "name": "subRouter",
+          "children": [{
+            "key": "subRouterA",
+            "name": "subRouterA",
+            "url": "/subRouter/subRouterA",
+            "wholeUrl": "/web/bizA/subRouter/subRouterA"
+          },{
+            "key": "subRouterB",
+            "name": "subRouterB",
+            "url": "/subRouter/subRouterB",
+            "wholeUrl": "/web/bizA/subRouter/subRouterB"
+          }]
         }
       ]
     },
@@ -25,19 +40,19 @@ export default {
         {
           "key": "index",
           "name": "Index",
-          "url": "",
+          "url": "/",
           "wholeUrl": "/web/bizB/"
         },
         {
           "key": "login",
           "name": "Login",
-          "url": "login",
+          "url": "/login",
           "wholeUrl": "/web/bizB/login"
         },
         {
           "key": "noLayout",
           "name": "noLayout",
-          "url": "noLayout",
+          "url": "/noLayout",
           "wholeUrl": "/web/bizB/noLayout"
         }
       ]
