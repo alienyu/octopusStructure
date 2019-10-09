@@ -23,15 +23,15 @@ export default class App extends React.Component {
 
         return (
             <LocaleProvider locale={langStore.currentLang == 'cn' ? zh_CN : null}>
-                <Router>
+                <Router basename="/web/bizA">
                     <Layout>
                         <Header><WebHeader /></Header>
                         <Layout>
                             <Sider><WebMenuBar /></Sider>
                             <Content style={{ height: 'calc(100vh - 156px)' }}>
                                 <Switch>
-                                    <Route path="/web/bizA/" exact component={Home} />
-                                    <Route path="/web/bizA/login" component={Login} />
+                                    <Route path="/" exact component={Home} />
+                                    <Route path="/login" component={Login} />
                                 </Switch>
                             </Content>
                         </Layout>

@@ -11,8 +11,8 @@ export default class NoLayout extends React.Component {
                 <Row type="flex" justify="center" align="middle" className="pageFrame">
                     <Col span={18}>{intl.get('noLayout.content')}</Col>
                 </Row>
-                <Button onClick={() => {this.props.history.push("/web/bizB/")}}>Go To Index</Button>
-                <Button onClick={() => {this.props.history.push("/web/bizB/login")}}>Go To Login Page</Button>
+                <Button onClick={() => {this.props.history.push("/")}}>Go To Index</Button>
+                <Button onClick={() => {this.props.history.push("/login")}}>Go To Login Page</Button>
             </WrapperNoLayoutCmp>
         );
     }

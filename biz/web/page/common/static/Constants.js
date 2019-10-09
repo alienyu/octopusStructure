@@ -5,14 +5,16 @@ export default {
       "name": "bizA",
       "children": [
         {
-          "key": "bizA-index",
+          "key": "index",
           "name": "Index",
-          "url": "/web/bizA/"
+          "url": "",
+          "wholeUrl": "/web/bizA/"
         },
         {
-          "key": "bizA-login",
+          "key": "login",
           "name": "Login",
-          "url": "/web/bizA/login"
+          "url": "login",
+          "wholeUrl": "/web/bizA/login"
         }
       ]
     },
@@ -21,19 +23,22 @@ export default {
       "name": "bizB",
       "children": [
         {
-          "key": "bizB-index",
+          "key": "index",
           "name": "Index",
-          "url": "/web/bizB/"
+          "url": "",
+          "wholeUrl": "/web/bizB/"
         },
         {
-          "key": "bizB-login",
+          "key": "login",
           "name": "Login",
-          "url": "/web/bizB/login"
+          "url": "login",
+          "wholeUrl": "/web/bizB/login"
         },
         {
-          "key": "bizB-noLayout",
+          "key": "noLayout",
           "name": "noLayout",
-          "url": "/web/bizB/noLayout"
+          "url": "noLayout",
+          "wholeUrl": "/web/bizB/noLayout"
         }
       ]
     }

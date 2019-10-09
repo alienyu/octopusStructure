@@ -17,8 +17,8 @@ export default class BizLayout extends React.Component {
                     <Sider><WebMenuBar /></Sider>
                     <Content style={{ height: 'calc(100vh - 156px)' }}>
                         <Switch>
-                            <Route path="/web/bizB/" exact component={Home} />
-                            <Route path="/web/bizB/login" component={Login} />
+                            <Route path="/" exact component={Home} />
+                            <Route path="/login" component={Login} />
                         </Switch>
                     </Content>
                 </Layout>

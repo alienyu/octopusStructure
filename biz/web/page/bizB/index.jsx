@@ -19,10 +19,10 @@ export default class App extends React.Component {
 
         return (
             <LocaleProvider locale={langStore.currentLang == 'cn' ? zh_CN : null}>
-                <Router>
+                <Router basename="/web/bizB">
                     <Switch>
-                        <Route path="/web/bizB/noLayout" component={NoLayout} />
-                        <Route path="/web/bizB/" component={Layout} />
+                        <Route path="/noLayout" component={NoLayout} />
+                        <Route path="/" component={Layout} />
                     </Switch>
                 </Router>
             </LocaleProvider>

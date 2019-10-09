@@ -33,8 +33,8 @@ export default class MenuBar extends Component {
     menuChange(e) {
         this.setState({selectedKeys: [e.key]});
         //跨页面跳转
-        if(!e.item.props.url.match(window.dc.pg)) {
-            location.href = e.item.props.url;
+        if(!e.item.props.eventKey.match(window.dc.pg)) {
+            location.href = e.item.props.wholeUrl;
         } else {
             //单页路由跳转
             console.log(111)
@@ -69,21 +69,21 @@ export default class MenuBar extends Component {
                                     {
                                         item.children.map(function(secondItem) {
                                             if(secondItem.children && secondItem.children.length > 0) {
-                                                return <SubMenu key={secondItem.key} title={secondItem.name}>
+                                                return <SubMenu key={item.key+ '-' + secondItem.key} title={secondItem.name}>
                                                     {
                                                         secondItem.children.map(function(thirdItem) {
-                                                            return <Menu.Item key={thirdItem.key} url={thirdItem.url}>{thirdItem.name}</Menu.Item>
+                                                            return <Menu.Item key={item.key+ '-' + secondItem.key + '-' + thirdItem.key} wholeUrl={thirdItem.wholeUrl} url={thirdItem.url}>{thirdItem.name}</Menu.Item>
                                                         })
                                                     }
                                                 </SubMenu>
                                             } else {
-                                                return <Menu.Item key={secondItem.key} url={secondItem.url}>{secondItem.name}</Menu.Item>
+                                                return <Menu.Item key={item.key+ '-' + secondItem.key} url={secondItem.url} wholeUrl={secondItem.wholeUrl}>{secondItem.name}</Menu.Item>
                                             }
                                         })
                                     }
                                 </SubMenu>
                             } else {
-                                return <Menu.Item key={item.key} url={item.url}>{item.name}</Menu.Item>
+                                return <Menu.Item key={item.key} url={item.url} wholeUrl={item.wholeUrl}>{item.name}</Menu.Item>
                             }
                         })
                     }
