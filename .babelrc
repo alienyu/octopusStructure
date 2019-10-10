@@ -7,7 +7,6 @@
     "transform-runtime",
     "transform-object-assign",
     "syntax-dynamic-import",
-    "dynamic-import-webpack",
     [
       "import",
       {
