@@ -24,14 +24,7 @@ let envConf = merge(projectConf, {
         historyApiFallback: {
             disableDotRule: true,
             rewrites: []
-        },
-        // proxy: {
-        //     '*': {
-        //         target: devConf.proxyServer,
-        //         changeOrigin: true,
-        //         secure: false
-        //     }
-        // }
+        }
     }
 });
 
@@ -103,5 +96,4 @@ function loadConfig() {
 }
 
 loadConfig();
-console.log(envConf.devServer.historyApiFallback.rewrites)
 module.exports = envConf;

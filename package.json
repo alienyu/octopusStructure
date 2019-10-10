@@ -65,6 +65,7 @@
   "author": "AlienYu",
   "license": "MIT",
   "devDependencies": {
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
     "webpack-bundle-analyzer": "^3.3.2"
   }
 }
