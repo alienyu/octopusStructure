@@ -1,11 +1,10 @@
 import React from 'react';
-
-const Home = React.lazy(() => import("./routes/home"));
-const Login = React.lazy(() => import("./routes/login"));
+var home = 'home';
+const Home = React.lazy(() => import(/* webpackChunkName: "home" */  './routes/home'));
+const Login = React.lazy(() => import(/* webpackChunkName: "login" */ './routes/login'));
 const SubRouter = React.lazy(() => import("./routes/subRouter"));
 const SubRouterA = React.lazy(() => import("./routes/subRouter/subRouterA"));
 const SubRouterB = React.lazy(() => import("./routes/subRouter/subRouterB"));
-
 // import Home from "./routes/home";
 // import Login from "./routes/login";
 // import SubRouter from "./routes/subRouter";
