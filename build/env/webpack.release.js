@@ -9,6 +9,7 @@ let projectConf = require(`${process.cwd()}/biz/webpack.project.js`)(releaseConf
 console.log("this is release")
 
 let envConf = merge(projectConf, {
+    mode: "production",
     output: {
         path: `${process.cwd()}/${projectName}-output/`, //输出目录的配置，模板、样式、脚本、图片等资源的路径配置都相对于它
         publicPath: '../../'               //模板、样式、脚本、图片等资源对应的server上的路径
@@ -38,9 +39,13 @@ function runtime(conf) {
     }));     //biz/platform/page/pagePath/pageName.js
     envConf.plugins.push(new HtmlWebpackPlugin({
         //根据模板插入css/js等生成最终HTML
-        filename: entryID + ".html",
+        filename: `${platform}/${pagePath}${htmlName}/index.html`,
         //生成的html存放路径，相对于path
-        template: `${fileRoute}/${htmlName}.html`,
+        template: `${fileRoute}/${htmlName}.ejs`,
+        deployConf: {
+            platform,
+            page
+        },
         favicon: `${process.cwd()}/biz/common/static/imgs/favicon.png`,
         //js插入的位置，true/'head'/'body'/false
         inject: 'body',

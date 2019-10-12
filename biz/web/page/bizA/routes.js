@@ -1,36 +1,31 @@
 import React from 'react';
-var home = 'home';
-const Home = React.lazy(() => import(/* webpackChunkName: "home" */  './routes/home?chunk=home'));
-const Login = React.lazy(() => import(/* webpackChunkName: "login" */ './routes/login'));
-const SubRouter = React.lazy(() => import("./routes/subRouter"));
-const SubRouterA = React.lazy(() => import("./routes/subRouter/subRouterA"));
-const SubRouterB = React.lazy(() => import("./routes/subRouter/subRouterB"));
-// import Home from "./routes/home";
-// import Login from "./routes/login";
-// import SubRouter from "./routes/subRouter";
-// import SubRouterA from "./routes/subRouter/subRouterA";
-// import SubRouterB from "./routes/subRouter/subRouterB"
+import { Route, Redirect, Switch } from 'react-router-dom';
+import Loadable from 'react-loadable';
 
-export default [{
-    redirect: true,
-    from: "/reg",
-    to: "/login"
-}, {
-    path: "/",
-    component: Home,
-    exact: true
-}, {
-    path: "/login",
-    component: Login
-}, {
-    path: "/subRouter",
-    component: SubRouter,
-    routes: [{
-        path: "/subRouterA",
-        component: SubRouterA,
-    }, {
-        path: "/subRouterB",
-        component: SubRouterB,
-    }]
-}]
+//Take care about the sequence of redirect config
+
+const routesConf= [{path: "login"}]
+const renderRootRoutes = () => {
+    let routesCmp = [];
+    routesConf.map((route, key) => {
+        if (route.from) {
+            routesCmp.push(<Redirect from={route.from} to={route.to} key={key} />);
+        } else {
+            let Component = Loadable({
+                loader: () => import(/* webpackChunkName: "web/bizA/[request]" */  `./routes/${route.path}`),
+                loading:() => {return null}
+            })
+            // let Component = React.lazy(() => import(/* webpackChunkName: "web/bizA/[request]" */  `./routes/${route.path}`));
+            routesCmp.push(<Route 
+                path={`/${route.path}`} 
+                key={key} 
+                exact={route.exact} 
+                render={props => <Component {...props} routes={route.routes} />} 
+            />)
+        }
+    })
+    return <Switch>{routesCmp}</Switch>
+}
+
+export default renderRootRoutes;
 

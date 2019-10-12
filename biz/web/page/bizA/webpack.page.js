@@ -8,7 +8,7 @@ module.exports = {
             'web-bizA-mock': `${path.resolve(__dirname, 'mockData')}`,
             'web-bizA-mobx': `${path.resolve(__dirname, 'mobx')}`,
             'web-bizA-locales': `${path.resolve(__dirname, 'locales')}`,
-            'web-bizA-routesConf': `${path.resolve(__dirname, 'routes.js')}`,
+            'web-bizA-renderRoutes': `${path.resolve(__dirname, 'routes.js')}`,
             'web-bizA-routes': `${path.resolve(__dirname, 'routes')}`
         }
     }

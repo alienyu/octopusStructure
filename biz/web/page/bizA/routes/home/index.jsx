@@ -1,6 +1,6 @@
 import React from "react";
 import { Row, Col, Button } from 'antd';
-import { WrapperHomeCmp } from './styled';
+import { WrapperHomeCmp } from './styled.js';
 
 export default class Home extends React.Component {
     render() {

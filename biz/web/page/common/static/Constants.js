@@ -17,6 +17,12 @@ export default {
           "wholeUrl": "/web/bizA/login"
         },
         {
+          "key": "other",
+          "name": "Other",
+          "url": "/other",
+          "wholeUrl": "/web/bizA/other"
+        },
+        {
           "key": "subRouter",
           "name": "subRouter",
           "children": [{

@@ -3,19 +3,19 @@ let webpack = require('webpack');
 let env = process.env.NODE_ENV;
 let deployContent = !env ? require("../config/devConfig.json")["deployContent"] : require("../config/releaseConfig.json")["deployContent"];
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 var baseConf = {
-    cache: true,
     output: {
         filename: '[name].js',           //每个页面对应的主js的生成配置
         chunkFilename: '[name].[chunkhash].chunk.js'   //chunk生成的配置
     },
     plugins: [
         new MiniCssExtractPlugin('[name].css'), //单独使用link标签加载css并设置路径，相对于output配置中的publicePath
-
+        new LodashModuleReplacementPlugin(),
         new webpack.HotModuleReplacementPlugin(), //热加载
-
+        new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
         // new BundleAnalyzerPlugin({ analyzerPort: 8919 })
     ],
     resolve: {

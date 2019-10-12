@@ -2,7 +2,7 @@ import React from "react";
 import { Row, Col, Form, Icon, Input, Button, Checkbox } from 'antd';
 import { observer } from 'mobx-react';
 import { WrapperLoginCmp } from './styled';
-import userInfoStore from 'web-mobx/userInfo';
+import userStore from 'web-mobx/userInfo';
 import loadingStore from 'web-mobx/loadingMask';
 
 @observer
@@ -15,7 +15,7 @@ class NormalLoginForm extends React.Component {
                     url: "/login",
                     data: values,
                     callback(data) {
-                        userInfoStore.changeUserInfo(Object.assign(data, values));
+                        userStore.changeUserInfo(Object.assign(data, values));
                     }
                 })
             }
@@ -27,7 +27,7 @@ class NormalLoginForm extends React.Component {
         return (
             <WrapperLoginCmp>
                 <Row type="flex" justify="center" align="middle" className="pageFrame">
-                    {userInfoStore.userInfo.token ?
+                    {userStore.userInfo.token ?
                         <Row>{intl.get('login.loginStatusText')}</Row> :
                         <Form onSubmit={this.handleSubmit} className="login-form">
                             <Form.Item>

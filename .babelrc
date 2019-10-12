@@ -7,14 +7,14 @@
     "transform-runtime",
     "transform-object-assign",
     "syntax-dynamic-import",
+    "lodash",
     [
       "import",
       {
         "libraryName": "antd",
-        "libraryDirectory": "es",
-        "style": "css"
-      }
-    ]
+        "libraryDirectory": "lib",
+        "style": "true"
+    }]
   ],
-  "comments": true
+"comments": true
 }

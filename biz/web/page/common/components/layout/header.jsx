@@ -26,6 +26,7 @@ export default class Header extends React.Component {
     }
 
     render() {
+        console.log("userName",userStore.userInfo.userName)
         return (
             <WrapperHeaderCmp>
                 <Row type="flex" justify="center">

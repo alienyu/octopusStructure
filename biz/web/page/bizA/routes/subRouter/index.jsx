@@ -1,8 +1,7 @@
 import React from "react";
 import { Route, Switch } from "react-router";
 import { Row, Col } from 'antd';
-import subRouterA from "./subRouterA";
-import subRouterB from "./subRouterB";
+import Loadable from 'react-loadable';
 
 export default class SubRouter extends React.Component {
     constructor(props) {
@@ -15,8 +14,12 @@ export default class SubRouter extends React.Component {
                 <Col span={18}>这里演示嵌套路由</Col>
                 <Switch>
                     {
-                        this.props.routes.map((value, key) => {
-                            return <Route path={`${this.props.match.url}${value.path}`} key={key} component={value.component} />
+                        this.props.routes.map((route, key) => {
+                            let Component = Loadable({
+                                loader: () => import(/* webpackChunkName: "web/bizA/[request]" */  `../../routes/subRouter/${route.path}`),
+                                loading:() => {return null}
+                            })
+                            return <Route path={`${this.props.match.url}/${route.path}`} key={key} component={Component} />
                         })
                     }
                     {/* <Route path={`${this.props.match.url}/subRouterA`} component={subRouterA} />
