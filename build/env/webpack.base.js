@@ -9,7 +9,7 @@ const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 var baseConf = {
     output: {
         filename: '[name].js',           //每个页面对应的主js的生成配置
-        chunkFilename: '[name].[chunkhash].chunk.js'   //chunk生成的配置
+        chunkFilename: '[name].[chunkhash].js'   //chunk生成的配置
     },
     plugins: [
         new MiniCssExtractPlugin('[name].css'), //单独使用link标签加载css并设置路径，相对于output配置中的publicePath

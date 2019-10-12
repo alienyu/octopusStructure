@@ -27,9 +27,7 @@ export default class App extends React.Component {
                         <Layout>
                             <Sider><WebMenuBar /></Sider>
                             <Content style={{ height: 'calc(100vh - 156px)' }}>
-                                <Switch>
-                                    {renderRoutes()}
-                                </Switch>
+                                {renderRoutes()}
                             </Content>
                         </Layout>
                         <Footer style={{ background: '#d8d9da' }}><WebFooter /></Footer>

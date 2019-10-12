@@ -32,7 +32,7 @@ const renderRootRoutes = () => {
             routesCmp.push(<Redirect from={route.from} to={route.to} key={key} />);
         } else {
             let Component = Loadable({
-                loader: () => import(/* webpackChunkName: "web/bizA/[request]" */  `./routes/${route.path}`),
+                loader: () => import(/* webpackChunkName: "web/bizA/chunk/[request]" */  `./routes/${route.path}`),
                 loading:() => {return null}
             })
             // let Component = React.lazy(() => import(/* webpackChunkName: "web/bizA/[request]" */  `./routes/${route.path}`));

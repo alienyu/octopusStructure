@@ -11,9 +11,9 @@
     [
       "import",
       {
+        //remove 'libraryDirectory' param and set to 'css' and you can import antd-css by your specific requirements.
         "libraryName": "antd",
-        "libraryDirectory": "lib",
-        "style": "true"
+        "style": "css" 
     }]
   ],
 "comments": true
