@@ -4,7 +4,27 @@ import Loadable from 'react-loadable';
 
 //Take care about the sequence of redirect config
 
-const routesConf= [{path: "login"}]
+const routesConf= [{
+    path: "home"
+},{
+    path: "login"
+},{
+    path: "other"
+},{
+    path: "subRouter",
+    routes: [{
+        path: "subRouterA"
+    }, {
+        path: "subRouterB"
+    }]
+},{
+    from: "/",
+    to: "/home"
+},{
+    from: "/reg",
+    to: "/login"
+}];
+
 const renderRootRoutes = () => {
     let routesCmp = [];
     routesConf.map((route, key) => {
