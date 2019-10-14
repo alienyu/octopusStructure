@@ -1,32 +1,31 @@
 import * as React from 'react'
 import { withRouter } from 'react-router-dom';
-import { observer } from 'mobx-react';
+import { observer, inject } from 'mobx-react';
 import { WrapperHeaderCmp } from './styled'
 import { Popconfirm, Row, Col, Select } from 'antd';
 const { Option } = Select;
-import userStore from 'web-mobx/userInfo';
-import langStore from 'web-mobx/lang';
 import Constants from 'web-Constants';
 const { supportedLang } = Constants;
 
-@observer
 @withRouter
+@inject('userStore', 'langStore')
+@observer
 export default class Header extends React.Component {
     constructor(props) {
         super(props);
     }
 
     logout() {
-        userStore.clearUserInfo();
+        this.props.userStore.clearUserInfo();
         this.props.history.push('/login');
     }
 
     changeLang(val) {
-        langStore.changeLang(val);
+        this.props.langStore.changeLang(val);
     }
 
     render() {
-        console.log("userName",userStore.userInfo.userName)
+        const { userStore, langStore } = this.props;
         return (
             <WrapperHeaderCmp>
                 <Row type="flex" justify="center">

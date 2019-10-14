@@ -9,8 +9,6 @@ const routesConf= [{
 },{
     path: "login"
 },{
-    path: "other"
-},{
     path: "subRouter",
     routes: [{
         path: "subRouterA"
@@ -18,11 +16,11 @@ const routesConf= [{
         path: "subRouterB"
     }]
 },{
-    from: "/",
-    to: "/home"
-},{
     from: "/reg",
     to: "/login"
+},{
+    from: "/",
+    to: "/home"
 }];
 
 const renderRootRoutes = () => {

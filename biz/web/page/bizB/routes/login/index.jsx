@@ -1,21 +1,25 @@
 import React from "react";
 import { Row, Col, Form, Icon, Input, Button, Checkbox } from 'antd';
-import { observer } from 'mobx-react';
+import { observer, inject } from 'mobx-react';
 import { WrapperLoginCmp } from './styled';
-import userInfoStore from 'web-mobx/userInfo';
-import loadingStore from 'web-mobx/loadingMask';
 
+@inject("userStore", "ajaxLoadingStore")
 @observer
 class NormalLoginForm extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+
     handleSubmit = e => {
         e.preventDefault();
+        const { userStore } = this.props;
         this.props.form.validateFields((err, values) => {
             if (!err) {
                 webAjax({
                     url: "/login",
                     data: values,
                     callback(data) {
-                        userInfoStore.changeUserInfo(Object.assign(data, values));
+                        userStore.changeUserInfo(Object.assign(data, values));
                     }
                 })
             }
@@ -23,16 +27,17 @@ class NormalLoginForm extends React.Component {
     };
 
     render() {
+        const { userStore, ajaxLoadingStore } = this.props;
         const { getFieldDecorator } = this.props.form;
         return (
             <WrapperLoginCmp>
                 <Row type="flex" justify="center" align="middle" className="pageFrame">
-                    {userInfoStore.userInfo.token ?
+                    {userStore.userInfo.token ?
                         <Row>{intl.get('login.loginStatusText')}</Row> :
                         <Form onSubmit={this.handleSubmit} className="login-form">
                             <Form.Item>
                                 {getFieldDecorator('userName', {
-                                    rules: [{ required: true, message: 'Please input your username!' }],
+                                    rules: [{ required: true, message: intl.get('login.form.valid.userName.empty') }],
                                 })(
                                     <Input
                                         prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}
@@ -52,7 +57,7 @@ class NormalLoginForm extends React.Component {
                                 )}
                             </Form.Item>
                             <Form.Item>
-                                <Button type="primary" htmlType="submit" className="login-form-button" disabled={loadingStore.status}>{loadingStore.status ? intl.get('login.button.logging') : intl.get('login.button.login')}</Button>
+                                <Button type="primary" htmlType="submit" className="login-form-button" disabled={ajaxLoadingStore.status}>{ajaxLoadingStore.status ? intl.get('login.button.logging') : intl.get('login.button.login')}</Button>
                             </Form.Item>
                         </Form>
                     }
@@ -62,5 +67,5 @@ class NormalLoginForm extends React.Component {
     }
 }
 
-const WrappedNormalLoginForm = Form.create({ name: 'normal_login' })(NormalLoginForm);
+const WrappedNormalLoginForm = Form.create()(NormalLoginForm);
 export default WrappedNormalLoginForm;

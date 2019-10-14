@@ -8,4 +8,4 @@ class AjaxLoadingStore {
     }
 }
 
-export default new AjaxLoadingStore();
+export default AjaxLoadingStore;

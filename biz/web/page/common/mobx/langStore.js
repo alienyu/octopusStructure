@@ -13,4 +13,4 @@ class LangStore {
     }
 }
 
-export default new LangStore();
+export default LangStore;

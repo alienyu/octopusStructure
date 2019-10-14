@@ -1,14 +1,18 @@
 import React from "react";
 import { Row, Col, Form, Icon, Input, Button, Checkbox } from 'antd';
-import { observer } from 'mobx-react';
+import { observer, inject } from 'mobx-react';
 import { WrapperLoginCmp } from './styled';
-import userStore from 'web-mobx/userInfo';
-import loadingStore from 'web-mobx/loadingMask';
 
+@inject("userStore", "ajaxLoadingStore")
 @observer
 class NormalLoginForm extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+
     handleSubmit = e => {
         e.preventDefault();
+        const { userStore } = this.props;
         this.props.form.validateFields((err, values) => {
             if (!err) {
                 webAjax({
@@ -23,6 +27,7 @@ class NormalLoginForm extends React.Component {
     };
 
     render() {
+        const { userStore, ajaxLoadingStore } = this.props;
         const { getFieldDecorator } = this.props.form;
         return (
             <WrapperLoginCmp>
@@ -52,7 +57,7 @@ class NormalLoginForm extends React.Component {
                                 )}
                             </Form.Item>
                             <Form.Item>
-                                <Button type="primary" htmlType="submit" className="login-form-button" disabled={loadingStore.status}>{loadingStore.status ? intl.get('login.button.logging') : intl.get('login.button.login')}</Button>
+                                <Button type="primary" htmlType="submit" className="login-form-button" disabled={ajaxLoadingStore.status}>{ajaxLoadingStore.status ? intl.get('login.button.logging') : intl.get('login.button.login')}</Button>
                             </Form.Item>
                         </Form>
                     }

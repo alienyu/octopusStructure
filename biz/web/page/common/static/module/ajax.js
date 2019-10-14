@@ -1,7 +1,7 @@
 import React,{Component} from 'react'
 import { hashHistory} from 'react-router';
 import { message } from 'antd';
-import ajaxLoadingStore from 'web-mobx/loadingMask';
+import { ajaxLoadingStore } from 'web-mobx';
 import Axios from 'axios';
 
 let env = process.env.NODE_ENV;
@@ -30,7 +30,6 @@ module.exports = (ops) => {
             config.callback.call(this, data.data);
         },2000)
     } else {
-        ajaxLoadingStore.changeStatus(true);
         Axios({
             method: config.method,
             url: config.url,

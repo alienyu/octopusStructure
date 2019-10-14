@@ -4,6 +4,7 @@
     "react-native-stage-0/decorator-support"
   ],
   "plugins": [
+    "transform-decorators-legacy",
     "transform-runtime",
     "transform-object-assign",
     "syntax-dynamic-import",
