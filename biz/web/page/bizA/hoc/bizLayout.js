@@ -1,21 +1,19 @@
 import React from "react";
-import { observer, inject } from 'mobx-react';
 import { Layout } from 'antd';
 const { Header, Footer, Sider, Content } = Layout;
 import WebHeader from 'web-headerCmp';
 import WebMenuBar from 'web-menuBarCmp';
 import WebFooter from 'web-footerCmp';
-import renderRoutes from "web-bizA-renderRoutes";
 
-export default class BizLayout extends React.Component {
-    render() {
+const bizLayout = (WrappedComponent) => {
+    return (props) => {
         return (
             <Layout>
                 <Header><WebHeader /></Header>
                 <Layout>
                     <Sider><WebMenuBar /></Sider>
                     <Content style={{ height: 'calc(100vh - 156px)' }}>
-                        {renderRoutes()}
+                        <WrappedComponent {...props} />
                     </Content>
                 </Layout>
                 <Footer style={{ background: '#d8d9da' }}><WebFooter /></Footer>
@@ -23,3 +21,5 @@ export default class BizLayout extends React.Component {
         )
     }
 }
+
+export default bizLayout;

@@ -4,8 +4,11 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { ConfigProvider } from 'antd';
 import zh_CN from 'antd/lib/locale-provider/zh_CN';
 import locales from 'web-bizA-locales';
+
+import bizLayout from "./routes/layout";
 import Other from "./routes/other";
-import bizLayout from './routes/layout'
+
+import renderRoutes from "web-bizA-renderRoutes";
 
 @inject("langStore")
 @observer
@@ -24,6 +27,7 @@ export default class App extends React.Component {
                         <Route path="/other" component={Other} />
                         <Route path="/" component={bizLayout} />
                     </Switch>
+                    {/* {renderRoutes()} */}
                 </Router>
             </ConfigProvider>
         );
