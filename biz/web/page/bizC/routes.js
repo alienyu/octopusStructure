@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, Redirect, Switch } from 'react-router-dom';
-import Loadable from 'react-loadable';
+import { bizLayout } from "web-bizC-hoc";
 
 //Take care about the sequence of redirect config
 const routesConf= [{
@@ -30,10 +30,6 @@ const routesConf= [{
 const renderRootRoutes = () => {
     let routesCmp = [];
     routesConf.map((route, key) => {
-        let Component = Loadable({
-            loader: () => import(/* webpackChunkName: "web/bizA/chunk/[request]" */  `./routes/${route.path}`),
-            loading:() => {return null}
-        })
         if (route.from) {
             routesCmp.push(<Redirect from={route.from} to={route.to} key={key} />);
         } else {
@@ -41,11 +37,20 @@ const renderRootRoutes = () => {
                 path={`/${route.path}`} 
                 key={key} 
                 exact={route.exact} 
-                render={props => <Component {...props} routes={route.routes} />}
+                render={props => renderRouteCmp(route, props)} 
             />)
         }
     })
     return <Switch>{routesCmp}</Switch>
+}
+
+const renderRouteCmp = (routeCfg, props) => {
+    let Component = React.lazy(() => import(/* webpackChunkName: "web/bizA/[request]" */  `./routes/${routeCfg.path}`));
+    if(routeCfg.layout) {
+        return bizLayout(Component)({...props, routes: routeCfg.routes})
+    } else {
+        return <Component {...props} routes={routeCfg.routes} />;
+    }
 }
 
 export default renderRootRoutes;

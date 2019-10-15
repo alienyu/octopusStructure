@@ -12,7 +12,7 @@ export default class MenuBar extends Component {
         super(props);
         this.state = {
             menuItems,
-            rootSubmenuKeys: ['bizA', 'bizB'],
+            rootSubmenuKeys: ['bizA', 'bizB', 'bizC'],
             openKeys: [''],
             selectedKeys: ['']
         };
@@ -37,7 +37,6 @@ export default class MenuBar extends Component {
             location.href = e.item.props.wholeurl;
         } else {
             //单页路由跳转
-            console.log(111)
             this.props.history.push(e.item.props.url);
         }
     }
