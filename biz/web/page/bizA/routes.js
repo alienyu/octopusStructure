@@ -4,16 +4,11 @@ import Loadable from 'react-loadable';
 
 //Take care about the sequence of redirect config
 const routesConf= [{
-    path: "home",
-    layout: true
+    path: ""
 },{
-    path: 'login',
-    layout: true
-},{
-    path: "other"
+    path: "home"
 },{
     path: "subRouter",
-    layout: true,
     routes: [{
         path: 'subRouterA'
     }, {
@@ -22,16 +17,13 @@ const routesConf= [{
 },{
     from: "/reg",
     to: "/login"
-},{
-    from: "/",
-    to: "/home"
 }];
 
 const renderRootRoutes = () => {
     let routesCmp = [];
     routesConf.map((route, key) => {
         let Component = Loadable({
-            loader: () => import(/* webpackChunkName: "web/bizA/chunk/[request]" */  `./routes/${route.path}`),
+            loader: () => import(/* webpackChunkName: "web/bizA/chunk/[request]" */  `./routes/${route.path || "home"}`),
             loading:() => {return null}
         })
         if (route.from) {

@@ -5,10 +5,11 @@ import { ConfigProvider } from 'antd';
 import zh_CN from 'antd/lib/locale-provider/zh_CN';
 import locales from 'web-bizA-locales';
 
-import bizLayout from "./routes/layout";
-import Other from "./routes/other";
+import { authToken } from "web-bizA-hoc";
 
-import renderRoutes from "web-bizA-renderRoutes";
+import Login from './routes/login';
+import Other from "./routes/other";
+import bizLayout from "./routes/layout";
 
 @inject("langStore")
 @observer
@@ -24,10 +25,10 @@ export default class App extends React.Component {
             <ConfigProvider locale={langStore.currentLang == 'cn' ? zh_CN : null}>
                 <Router basename="/web/bizA">
                     <Switch>
-                        <Route path="/other" component={Other} />
+                        <Route path="/login" component={Login} />
+                        <Route path="/other" component={authToken(Other)} />
                         <Route path="/" component={bizLayout} />
                     </Switch>
-                    {/* {renderRoutes()} */}
                 </Router>
             </ConfigProvider>
         );

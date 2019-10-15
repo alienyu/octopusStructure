@@ -33,7 +33,7 @@ class NormalLoginForm extends React.Component {
             <WrapperLoginCmp>
                 <Row type="flex" justify="center" align="middle" className="pageFrame">
                     {userStore.userInfo.token ?
-                        <Row>{intl.get('login.loginStatusText')}</Row> :
+                        <Row><Row>{intl.get('login.loginStatusText')}</Row><Button type="primary" onClick={() => this.props.history.push("/")} className="login-form-button">去首页(未登录进不去)</Button></Row> :
                         <Form onSubmit={this.handleSubmit} className="login-form">
                             <Form.Item>
                                 {getFieldDecorator('userName', {
@@ -58,6 +58,9 @@ class NormalLoginForm extends React.Component {
                             </Form.Item>
                             <Form.Item>
                                 <Button type="primary" htmlType="submit" className="login-form-button" disabled={ajaxLoadingStore.status}>{ajaxLoadingStore.status ? intl.get('login.button.logging') : intl.get('login.button.login')}</Button>
+                            </Form.Item>
+                            <Form.Item>
+                                <Button type="primary" onClick={() => this.props.history.push("/")} className="login-form-button">去首页(未登录进不去)</Button>
                             </Form.Item>
                         </Form>
                     }
