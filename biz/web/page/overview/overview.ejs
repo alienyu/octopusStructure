@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="HandheldFriendly" content="true">
+    <meta name="format-detection" content="telephone=no">
+    <title>Structure Overview</title>
+</head>
+<body>
+    <div id="app" class="frame">
+        <div class="left">
+            <h1>概览</h1>
+            <h2>框架基本说明</h2>
+            <ul>
+                <li>默认支持MPA混合编译模式。</li>
+                <li>默认SPA框架为React，同时支持Vue。</li>
+                <li>MPA中各单页应用支持自定义编译配置。</li>
+                <li>支持Antd、Lodash等大型第三方模块按需加载和打包。</li>
+            </ul>
+            <h2>主要技术栈说明</h2>
+            <ul>
+                <li class="done">SPA技术选型React: 15.6.2 -> 16.9.0</li>
+                <li class="done">SPA对应路由ReactRouter: 2.4.1 -> 5.1.2</li>
+                <li class="done">构建工具Webpack: 1.12.13 -> 4.29.6</li>
+                <li class="done">CssInJs库StyleConponent: 2.2.4 -> 4.2.0</li>
+                <li class="done">Css预编译工具Less: 2.6.0 -> 3.9.0</li>
+                <li class="done">UI组件库AntdDesign: 2.12.8 -> 3.15.2</li>
+                <li class="done">SPA全局数据通信Mobx: 3.4.0 -> 5.9.4</li>
+                <li class="done">JS语言扩展Lodash: 4.17.4 -> 4.17.11</li>
+                <li class="done">React国际化ReactIntlUniversal: 1.5.1 -> 2.1.1</li>
+                <li class="done">HttpRequest库Axios: JquertAjax -> 0.19.0</li>
+                <li class="todo">下一版本需要升级和扩充内容:
+                    <ul>
+                        <li class="todo">SplitChunks应用</li>
+                        <li class="todo">JS静态语言扩展TypeScript</li>
+                        <li class="todo">语法检测和编码规范ESLint/TSLint</li>
+                        <li class="todo">单元测试框架Jest</li>
+                        <li class="todo">E2E自动化测试框架Cypress</li>
+                        <li class="todo">服务端渲染NextJS</li>
+                        <li class="todo">使用Docker打包部署</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="right">
+            <h1>框架示例说明</h1>
+            <h2>基本说明</h2>
+            <ul>
+                <li>示例由三个独立的SPA应用组成,每个SPA都有各自的应用特点</li>
+                <li>每个示例都可以单独编译，也可以组合编译</li>
+                <li>示例中的组件有属于某个具体应用的，也有来自于公共组件的，例如左侧导航栏MenuBar</li>
+                <li>三个示例都包含登录态同步功能(跨页面数据通信实现)</li>
+            </ul>
+            <h2>每个单页应用及单页路由说明</h2>
+            <h3>BizA:</h3>
+            <ul>主页说明:
+                <li>采用异步路由模式(React Loadable)按需加载组件</li>
+                <li>采用嵌套路由模式处理全局Layout("/"路径匹配layout组件)</li>
+                <li>顶层路由采取hardCode编写(包含带layout和不含layout的path)</li>
+                <li>包含layout的路由采用配置方式实现</li>
+                <li>登录态校验实现(原routerV2.0中onEnter实现): 包含layout的路由在layout组件中处理；不包含layout的通过HOC封装路由组件实现</li>
+            </ul>
+            <ul>单页例子说明:
+                <li>Index: 首页, 不登录无法访问</li>
+                <li>Login: 登录页面，登录前后页面显示有所不同,不包含layout</li>
+                <li>Other: 不包含layout的普通页面</li>
+                <li>SubRouter: 嵌套路由演示，在layout组件中通过配置化方式实现路由。</li>
+            </ul>
+            <h3>BizB:</h3>
+            <ul>主页说明:
+                <li>采用同步路由模式，最终只生成一个JS文件</li>
+                <li>非全局配置式的路由，路由全部写在各个组件内</li>
+                <li>完整演示Mobx功能(登录页嵌套在layout中，登录后用户名实时在头部组件中更新)</li>
+            </ul>
+            <ul>单页例子说明:
+                <li>Index: 首页, 不登录也能访问</li>
+                <li>Login: 登录页面，登录前后页面显示有所不同</li>
+                <li>noLayout: 不包含layout的普通页面</li>
+            </ul>
+            <h3>BizC:</h3>
+            <ul>主页说明:
+                <li>采用异步路由模式(React Lazy)按需加载组件</li>
+                <li>采用HOC方式处理全局Layout</li>
+                <li>路由采用配置方式实现(包含嵌套路由)，在顶层入口渲染，嵌套路由的渲染在嵌套的容器组件内处理。</li>
+            </ul>
+            <ul>单页例子说明:
+                <li>Index: 首页, 不登录也能访问</li>
+                <li>Login: 登录页面，登录前后页面显示有所不同,不包含layout</li>
+                <li>Other: 不包含layout的普通页面, 不登录无法访问</li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

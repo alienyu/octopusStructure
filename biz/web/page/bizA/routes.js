@@ -6,9 +6,11 @@ import Loadable from 'react-loadable';
 const routesConf= [{
     path: ""
 },{
-    path: "home"
+    path: "home",
+    layout: true
 },{
     path: "subRouter",
+    layout: true,
     routes: [{
         path: 'subRouterA'
     }, {

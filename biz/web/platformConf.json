@@ -1,4 +1,4 @@
 {
-    "pageList": ["bizA", "bizB", "bizC"],
+    "pageList": ["overview", "bizA", "bizB", "bizC"],
     "vendorConf": []
 }
