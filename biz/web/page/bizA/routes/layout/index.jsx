@@ -13,10 +13,8 @@ import renderRoutes from "web-bizA-renderRoutes";
 @withRouter
 export default class BizLayout extends React.Component {
     componentWillMount() {
-        console.log(123)
         const { userStore, history } = this.props;
         if(!userStore.userInfo.token) {
-            console.log(2321)
             history.push("/login");
         }
     }

@@ -42,6 +42,7 @@
                     </ul>
                 </li>
             </ul>
+            <a href="/web/bizB/">Let's Begin</a>
         </div>
         <div class="right">
             <h1>框架示例说明</h1>
@@ -85,9 +86,10 @@
                 <li>路由采用配置方式实现(包含嵌套路由)，在顶层入口渲染，嵌套路由的渲染在嵌套的容器组件内处理。</li>
             </ul>
             <ul>单页例子说明:
-                <li>Index: 首页, 不登录也能访问</li>
-                <li>Login: 登录页面，登录前后页面显示有所不同,不包含layout</li>
-                <li>Other: 不包含layout的普通页面, 不登录无法访问</li>
+                <li>Index: 首页, 包含layout和登录态校验组件</li>
+                <li>Login: 登录页面，登录前后页面显示有所不同,包含layout,可以完整演示mobx效果</li>
+                <li>Other: 不包含layout的普通页面, 需要登录校验</li>
+                <li>SubRouter: 包含layout的普通页面, 不需要登录校验</li>
             </ul>
         </div>
     </div>

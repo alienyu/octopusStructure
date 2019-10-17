@@ -5,6 +5,8 @@ let devConf = require("../config/devConfig.json");
 let projectName = devConf.projectName;
 let HtmlWebpackPlugin = require('html-webpack-plugin');
 let projectConf = require(`${process.cwd()}/biz/webpack.project.js`)(devConf);
+var OpenBrowserPlugin = require('open-browser-webpack-plugin');
+
 console.log("this is dev")
 
 let envConf = merge(projectConf, {
@@ -25,7 +27,10 @@ let envConf = merge(projectConf, {
             disableDotRule: true,
             rewrites: []
         }
-    }
+    },
+    plugins: [
+        new OpenBrowserPlugin({ url: `http://localhost:${devConf.port || 7777}/web/overview` })
+      ]
 });
 
 function runtime(conf) {

@@ -4,7 +4,8 @@ import Loadable from 'react-loadable';
 
 //Take care about the sequence of redirect config
 const routesConf= [{
-    path: ""
+    path: "",
+    exact: true
 },{
     path: "home",
     layout: true

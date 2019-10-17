@@ -17,8 +17,8 @@ var baseConf = {
             'paths': true
         }),
         new webpack.HotModuleReplacementPlugin(), //热加载
-        // new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
-        // new BundleAnalyzerPlugin({ analyzerPort: 8919 })
+        new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
+        new BundleAnalyzerPlugin({ analyzerPort: 8919 })
     ],
     resolve: {
         extensions: ['.js', '.vue', '.jsx'],

@@ -9,6 +9,7 @@ export default class SubRouter extends React.Component {
     }
 
     render() {
+        console.log(123)
         return (
             <Row type="flex" justify="center" align="middle" className="pageFrame">
                 <Col span={18}>这里演示嵌套路由</Col>
