@@ -47,7 +47,7 @@ const renderRootRoutes = () => {
 }
 
 const renderRouteCmp = (routeCfg, props) => {
-    let Component = React.lazy(() => import(/* webpackChunkName: "web/bizA/[request]" */  `./routes/${routeCfg.path}`));
+    let Component = React.lazy(() => import(/* webpackChunkName: "web/bizC/[request]" */  `./routes/${routeCfg.path}`));
     //TODO: we need use compose plugin
     if(routeCfg.layout) {
         Component = bizLayout(Component)

@@ -4,7 +4,6 @@ let env = process.env.NODE_ENV;
 let deployContent = !env ? require("../config/devConfig.json")["deployContent"] : require("../config/releaseConfig.json")["deployContent"];
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
-const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 var baseConf = {
     output: {
@@ -17,8 +16,7 @@ var baseConf = {
             'paths': true
         }),
         new webpack.HotModuleReplacementPlugin(), //热加载
-        new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
-        new BundleAnalyzerPlugin({ analyzerPort: 8919 })
+        new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/)
     ],
     resolve: {
         extensions: ['.js', '.vue', '.jsx'],
@@ -116,4 +114,10 @@ function loadBizAssets(oriConf) {
     })
     return oriConf;
 }
+
+generateAntdIconsConfigFile = () => {
+
+}
+
+generateAntdIconsConfigFile();
 module.exports = loadBizAssets(baseConf);

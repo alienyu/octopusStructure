@@ -1,3 +1,4 @@
 {
-    "vendorConf": []
+    "vendorConf": [],
+    "antdIconList": ["User", "Lock"]
 }

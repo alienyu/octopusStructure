@@ -18,7 +18,7 @@ function loadProjectConf(envConf) {
         entry: {},
         resolve: {
             alias: {
-                'buildConf': `${process.cwd()}/build/config`
+                'buildConf': `${process.cwd()}/build/config`,
             }
         },
         plugins: [

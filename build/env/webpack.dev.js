@@ -6,6 +6,7 @@ let projectName = devConf.projectName;
 let HtmlWebpackPlugin = require('html-webpack-plugin');
 let projectConf = require(`${process.cwd()}/biz/webpack.project.js`)(devConf);
 var OpenBrowserPlugin = require('open-browser-webpack-plugin');
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 console.log("this is dev")
 
@@ -29,7 +30,8 @@ let envConf = merge(projectConf, {
         }
     },
     plugins: [
-        new OpenBrowserPlugin({ url: `http://localhost:${devConf.port || 7777}/web/overview` })
+        new OpenBrowserPlugin({ url: `http://localhost:${devConf.port || 7777}/web/overview` }),
+        new BundleAnalyzerPlugin({ analyzerPort: 8919 })
       ]
 });
 

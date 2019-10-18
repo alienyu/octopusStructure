@@ -6,6 +6,8 @@ let releaseConf = require("../config/releaseConfig.json");
 let projectName = releaseConf.projectName;
 let HtmlWebpackPlugin = require('html-webpack-plugin');
 let projectConf = require(`${process.cwd()}/biz/webpack.project.js`)(releaseConf);
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+
 console.log("this is release")
 
 let envConf = merge(projectConf, {
@@ -19,7 +21,9 @@ let envConf = merge(projectConf, {
             'process.env': {
                 'NODE_ENV': '"production"'
             }
-        })
+        }),
+        new BundleAnalyzerPlugin({ analyzerPort: 8920 })
+
     ],
     devtool: env == "local" ? "source-map" : ""
 });

@@ -4,6 +4,7 @@ console.log("this is bizA page")
 module.exports = {
     resolve: {
         alias: {
+            "@ant-design/icons/lib/dist$": path.resolve(__dirname, "antdIcons.js"),
             'web-bizA-components': `${path.resolve(__dirname, 'components')}`,
             'web-bizA-mock': `${path.resolve(__dirname, 'mockData')}`,
             'web-bizA-mobx': `${path.resolve(__dirname, 'mobx')}`,
