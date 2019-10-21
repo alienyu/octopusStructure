@@ -1,7 +1,7 @@
 import layout from './layout'
 
-const enLocales = {
+const cnLocales = {
     layout
 }
 
-export default enLocales;
+export default cnLocales;

@@ -12,10 +12,12 @@ var baseConf = {
     },
     plugins: [
         new MiniCssExtractPlugin('[name].css'), //单独使用link标签加载css并设置路径，相对于output配置中的publicePath
+        //按需加载lodash
         new LodashModuleReplacementPlugin({
             'paths': true
         }),
         new webpack.HotModuleReplacementPlugin(), //热加载
+        //优化moment打包
         new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/)
     ],
     resolve: {
