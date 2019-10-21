@@ -21,4 +21,4 @@ var router = require("./server/router.js");
 app.use(router);
 
 //在这里修改端口号
-app.listen(7777, function () {});
+app.listen(6666, function () {});

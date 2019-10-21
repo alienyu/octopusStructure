@@ -19,6 +19,7 @@ function loadProjectConf(envConf) {
         resolve: {
             alias: {
                 'buildConf': `${process.cwd()}/build/config`,
+                "@ant-design/icons/lib/dist$": `${process.cwd()}/biz/common/modules/antdIcons.js`,
             }
         },
         plugins: [

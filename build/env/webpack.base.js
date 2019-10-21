@@ -1,7 +1,7 @@
-let path = require('path');
-let webpack = require('webpack');
-let env = process.env.NODE_ENV;
-let deployContent = !env ? require("../config/devConfig.json")["deployContent"] : require("../config/releaseConfig.json")["deployContent"];
+const webpack = require('webpack');
+const fs = require("fs");
+const env = process.env.NODE_ENV;
+const deployContent = !env ? require("../config/devConfig.json")["deployContent"] : require("../config/releaseConfig.json")["deployContent"];
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
 
@@ -115,9 +115,36 @@ function loadBizAssets(oriConf) {
     return oriConf;
 }
 
-generateAntdIconsConfigFile = () => {
+getIconsList = () => {
+    let iconListFiles = [];
+    const platformList = Object.keys(deployContent);
+    platformList.map(platform => {
+        const pageList = deployContent[platform].length > 0 ? deployContent[platform] : require(`${process.cwd()}/biz/${platform}/platformConf.json`)["pageList"];
+        const platformIconsConf = require(`${process.cwd()}/biz/${platform}/platformConf.json`)["antdIconList"] ? require(`${process.cwd()}/biz/${platform}/platformConf.json`)["antdIconList"] : [];  //平台级icon配置文件
+        pageList.map(page => {
+            const pageIconsConf = require(`${process.cwd()}/biz/${platform}/page/${page}/pageConf.json`)["antdIconList"] ? require(`${process.cwd()}/biz/${platform}/page/${page}/pageConf.json`)["antdIconList"] : []; //页面级icon配置文件
+            iconListFiles = iconListFiles.concat(pageIconsConf) //合并页面级icon
 
+        })
+        iconListFiles = iconListFiles.concat(platformIconsConf) //合并平台级icon
+    })
+    const projectIconsConf = require(`${process.cwd()}/biz/projectConf.json`)["antdIconList"] ? require(`${process.cwd()}/biz/projectConf.json`)["antdIconList"] : [];  //项目级icon配置文件
+    iconListFiles = iconListFiles.concat(projectIconsConf) //合并项目级icon
+    console.log(iconListFiles)
+    return iconListFiles;
 }
 
-generateAntdIconsConfigFile();
+genIconsConfigList = (iconsList) => {
+    let iconsFileContent = "";
+    const uniqueIconsList =  [...new Set(iconsList)];
+    console.log(uniqueIconsList)
+    uniqueIconsList.map(icon => {
+        iconsFileContent += `export { default as ${icon}Outline } from '@ant-design/icons/lib/outline/${icon}Outline';\n`
+    })
+    console.log(iconsFileContent)
+    const iconFilePath = `${process.cwd()}/biz/common/modules/antdIcons.js`;
+    fs.writeFileSync(iconFilePath, iconsFileContent);
+}
+
+genIconsConfigList(getIconsList());
 module.exports = loadBizAssets(baseConf);

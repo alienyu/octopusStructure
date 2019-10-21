@@ -40,7 +40,7 @@ class NormalLoginForm extends React.Component {
                                     rules: [{ required: true, message: intl.get('login.form.valid.userName.empty') }],
                                 })(
                                     <Input
-                                        prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}
+                                        prefix={<Icon type="alipay" style={{ color: 'rgba(0,0,0,.25)' }} />}
                                         placeholder="Username"
                                     />,
                                 )}
@@ -50,7 +50,7 @@ class NormalLoginForm extends React.Component {
                                     rules: [{ required: true, message: 'Please input your Password!' }],
                                 })(
                                     <Input
-                                        prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />}
+                                        prefix={<Icon type="alibaba" style={{ color: 'rgba(0,0,0,.25)' }} />}
                                         type="password"
                                         placeholder="Password"
                                     />,
