@@ -30,7 +30,7 @@ let envConf = merge(projectConf, {
         }
     },
     plugins: [
-        new OpenBrowserPlugin({ url: `http://localhost:${devConf.port || 7777}/web/overview` }),
+        // new OpenBrowserPlugin({ url: `http://localhost:${devConf.port || 7777}/web/overview` }),
         new BundleAnalyzerPlugin({ analyzerPort: 8919 })
       ]
 });
@@ -44,10 +44,7 @@ function runtime(conf) {
     var entryID = `${platform}/${pagePath}${htmlName}/${htmlName}`; // projectName/platform/pagePath/pageName
     var fileRoute = `${process.cwd()}/biz/${platform}/page/${pagePath}${htmlName}`; //biz/platform/page/pagePath/pageName
     //将公共模块与页面入口模块合并为一个模块
-    envConf.entry[entryID] = [`${fileRoute}/${htmlName}.js`].concat(getPageVendorConf({
-        platform,
-        page
-    }));
+    envConf.entry[entryID] = [`${fileRoute}/${htmlName}.js`]
     //biz/platform/page/pagePath/pageName.js
     envConf.plugins.push(new HtmlWebpackPlugin({
         //根据模板插入css/js等生成最终HTML
@@ -62,7 +59,7 @@ function runtime(conf) {
         //js插入的位置，true/'head'/'body'/false
         inject: 'body',
         hash: true, //为静态资源生成hash值
-        chunks: [entryID], //需要引入的chunk，不配置就会引入所有页面的资源
+        chunks: [entryID, "web/bizC/common/bizBase"], //需要引入的chunk，不配置就会引入所有页面的资源
         minify: {
             removeComments: true, //移除HTML中的注释
             collapseWhitespace: false //删除空白符与换行符

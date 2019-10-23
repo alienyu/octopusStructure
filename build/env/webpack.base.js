@@ -96,6 +96,26 @@ var baseConf = {
                 }
             }
         ]
+    },
+    optimization: {
+        splitChunks: {
+            chunks: 'all',
+            minSize: 30000,
+            minChunks: 1,
+            maxAsyncRequests: 5,
+            maxInitialRequests: 3,
+            automaticNameDelimiter: '~',
+            name: true,
+            cacheGroups: {
+                vendors: false,
+                bizBase: {
+                    name: 'web/bizC/common/bizBase',
+                    chunks: "all",
+                    test: /react|mobx-react|mobx|moment|antd|lodash/,
+                    priority: 10
+                },
+            }
+        }
     }
 }
 
@@ -138,7 +158,7 @@ getIconsList = () => {
 
 genIconsConfigList = (iconsList) => {
     let iconsFileContent = "";
-    const uniqueIconsList =  [...new Set(iconsList)];
+    const uniqueIconsList = [...new Set(iconsList)];
     console.log(uniqueIconsList)
     uniqueIconsList.map(icon => {
         iconsFileContent += `export { default as ${icon}Outline } from '@ant-design/icons/lib/outline/${icon}Outline';\n`

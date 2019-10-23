@@ -1,4 +1,4 @@
 {
-    "vendorConf": [],
+    "vendorConf": ["react"],
     "antdIconList": ["Redo", "Weibo", "User", "Lock"]
 }

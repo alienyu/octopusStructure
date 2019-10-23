@@ -16,7 +16,7 @@ export default class SubRouter extends React.Component {
                     {
                         this.props.routes.map((route, key) => {
                             let Component = Loadable({
-                                loader: () => import(/* webpackChunkName: "web/bizC/[request]" */  `../../routes/subRouter/${route.path}`),
+                                loader: () => import(/* webpackChunkName: "web/bizC/chunk/subRouter/[request]" */  `../../routes/subRouter/${route.path}`),
                                 loading:() => {return null}
                             })
                             return <Route path={`${this.props.match.url}/${route.path}`} key={key} component={Component} />
