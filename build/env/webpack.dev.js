@@ -9,7 +9,6 @@ var OpenBrowserPlugin = require('open-browser-webpack-plugin');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 console.log("this is dev")
-
 let envConf = merge(projectConf, {
     mode: 'development',
     output: {
@@ -32,7 +31,7 @@ let envConf = merge(projectConf, {
     plugins: [
         // new OpenBrowserPlugin({ url: `http://localhost:${devConf.port || 7777}/web/overview` }),
         new BundleAnalyzerPlugin({ analyzerPort: 8919 })
-      ]
+    ]
 });
 
 function runtime(conf) {
@@ -43,9 +42,10 @@ function runtime(conf) {
     let pagePath = pageArr.length > 0 ? pageArr.join("/") : ""; //页面路径(pagePathA/pagePathB)
     var entryID = `${platform}/${pagePath}${htmlName}/${htmlName}`; // projectName/platform/pagePath/pageName
     var fileRoute = `${process.cwd()}/biz/${platform}/page/${pagePath}${htmlName}`; //biz/platform/page/pagePath/pageName
-    //将公共模块与页面入口模块合并为一个模块
     envConf.entry[entryID] = [`${fileRoute}/${htmlName}.js`]
     //biz/platform/page/pagePath/pageName.js
+    //提取各页面公共模块,并生成splitChunks
+    // genSplitChunksConf(getPageVendorConf(conf), conf);
     envConf.plugins.push(new HtmlWebpackPlugin({
         //根据模板插入css/js等生成最终HTML
         filename: `${platform}/${pagePath}${htmlName}/index.html`,
@@ -59,7 +59,7 @@ function runtime(conf) {
         //js插入的位置，true/'head'/'body'/false
         inject: 'body',
         hash: true, //为静态资源生成hash值
-        chunks: [entryID, "web/bizC/common/bizBase"], //需要引入的chunk，不配置就会引入所有页面的资源
+        chunks: [entryID, 'vendor'], //需要引入的chunk，不配置就会引入所有页面的资源
         minify: {
             removeComments: true, //移除HTML中的注释
             collapseWhitespace: false //删除空白符与换行符
@@ -74,6 +74,19 @@ function runtime(conf) {
     envConf.devServer.historyApiFallback.rewrites.push(rewriteItem);
 }
 
+genSplitChunksConf = (vendors, conf) => {
+    const { platform, page } = conf;
+    const regText = vendors.join("|");
+    const testReg = new RegExp(regText);
+    const fileName = `${platform}-${page}-common`
+    envConf.optimization.splitChunks.cacheGroups[fileName] = {
+        name: `${platform}/${page}/common/${fileName}`,
+        chunks: "all",
+        test: testReg,
+        priority: 10
+    }
+}
+
 function getPageVendorConf(conf) {
     let platform = conf.platform;
     let page = conf.page;
@@ -84,7 +97,6 @@ function getPageVendorConf(conf) {
 }
 
 function loadConfig() {
-    module.exports.entry = {};
     //解析需要构建的页面
     let deployContent = devConf.deployContent;
     let platformList = Object.keys(deployContent);
@@ -100,4 +112,5 @@ function loadConfig() {
 }
 
 loadConfig();
+console.log("envConf.optimization.splitChunks.cacheGroups", envConf.optimization.splitChunks.cacheGroups)
 module.exports = envConf;

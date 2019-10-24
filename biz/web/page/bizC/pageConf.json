@@ -1,4 +1,4 @@
 {
-    "vendorConf": ["react"],
+    "vendorConf": ["mobx", "mobx-react"],
     "antdIconList": ["Redo", "Weibo", "User", "Lock"]
 }
