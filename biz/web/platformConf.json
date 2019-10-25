@@ -1,5 +1,5 @@
 {
     "pageList": ["overview", "bizA", "bizB", "bizC"],
-    "vendorConf": ["react", "react-router-dom"],
-    "antdIconList": ["Yuque", "Alibaba"]
+    "vendorConf": [],
+    "antdIconList": ["Yuque", "Alibaba", "ExclamationCircle"]
 }

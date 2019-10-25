@@ -4,12 +4,8 @@ const env = process.env.NODE_ENV;
 const deployContent = !env ? require("../config/devConfig.json")["deployContent"] : require("../config/releaseConfig.json")["deployContent"];
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
-const vendorPkg = [
-    'react',
-    'react-router-dom'
-];
+
 var baseConf = {
-    entry: { 'vendor': vendorPkg },
     output: {
         filename: '[name].js',           //每个页面对应的主js的生成配置
         chunkFilename: '[name].[chunkhash].js'   //chunk生成的配置
@@ -56,7 +52,7 @@ var baseConf = {
                 test: /\.css$/,
                 //配置css的抽取器、加载器。'-loader'可以省去
                 use: [
-                    "style-loader",
+                    {loader: MiniCssExtractPlugin.loader},
                     "css-loader"
                 ]
             }, {
@@ -65,7 +61,7 @@ var baseConf = {
                 //根据从右到左的顺序依次调用less、css加载器，前一个的输出是后一个的输入
                 //你也可以开发自己的loader哟。有关loader的写法可自行谷歌之。
                 use: [
-                    "style-loader",
+                    {loader: MiniCssExtractPlugin.loader},
                     "css-loader",
                     "less-loader"
                 ]
@@ -157,5 +153,5 @@ genIconsConfigList = (iconsList) => {
     fs.writeFileSync(iconFilePath, iconsFileContent);
 }
 
-genIconsConfigList(getIconsList());
+// genIconsConfigList(getIconsList());
 module.exports = loadBizAssets(baseConf);

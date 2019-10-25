@@ -40,7 +40,7 @@ class NormalLoginForm extends React.Component {
                                     rules: [{ required: true, message: intl.get('login.form.valid.userName.empty') }],
                                 })(
                                     <Input
-                                        prefix={<Icon type="delete" style={{ color: 'rgba(0,0,0,.25)' }} />}
+                                        prefix={<Icon type="exclamation-circle" style={{ color: 'rgba(0,0,0,.25)' }} />}
                                         placeholder="Username"
                                     />,
                                 )}

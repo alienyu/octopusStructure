@@ -30,7 +30,7 @@ let envConf = merge(projectConf, {
     },
     plugins: [
         // new OpenBrowserPlugin({ url: `http://localhost:${devConf.port || 7777}/web/overview` }),
-        new BundleAnalyzerPlugin({ analyzerPort: 8919 })
+        // new BundleAnalyzerPlugin({ analyzerPort: 8919 })
     ]
 });
 
@@ -59,7 +59,7 @@ function runtime(conf) {
         //js插入的位置，true/'head'/'body'/false
         inject: 'body',
         hash: true, //为静态资源生成hash值
-        chunks: [entryID, 'vendor'], //需要引入的chunk，不配置就会引入所有页面的资源
+        chunks: [entryID], //需要引入的chunk，不配置就会引入所有页面的资源
         minify: {
             removeComments: true, //移除HTML中的注释
             collapseWhitespace: false //删除空白符与换行符
@@ -112,5 +112,4 @@ function loadConfig() {
 }
 
 loadConfig();
-console.log("envConf.optimization.splitChunks.cacheGroups", envConf.optimization.splitChunks.cacheGroups)
 module.exports = envConf;
