@@ -3,7 +3,7 @@ import { observable, action } from 'mobx';
 class AjaxLoadingStore {
     @observable status = false;
 
-    @action changeStatus(val) {
+    @action changeStatus(val: boolean) {
         this.status = val;
     }
 }

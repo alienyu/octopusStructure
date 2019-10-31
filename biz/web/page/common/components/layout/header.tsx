@@ -4,14 +4,21 @@ import { observer, inject } from 'mobx-react';
 import { WrapperHeaderCmp } from './styled'
 import { Popconfirm, Row, Col, Select } from 'antd';
 const { Option } = Select;
-import Constants from 'web-Constants';
+import Constants from 'webConstants';
 const { supportedLang } = Constants;
 
-@withRouter
+declare var intl: any;
+
+type props = {
+    userStore? : any,
+    langStore? : any,
+    history: any
+}
+
 @inject('userStore', 'langStore')
 @observer
-export default class Header extends React.Component {
-    constructor(props) {
+class Header extends React.Component<props, {}> {
+    constructor(props: any) {
         super(props);
     }
 
@@ -20,7 +27,7 @@ export default class Header extends React.Component {
         this.props.history.push('/login');
     }
 
-    changeLang(val) {
+    changeLang(val: string) {
         this.props.langStore.changeLang(val);
     }
 
@@ -54,3 +61,4 @@ export default class Header extends React.Component {
     }
 }
 
+export default withRouter(Header);

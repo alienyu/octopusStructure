@@ -1,19 +1,24 @@
-import React from "react";
+import * as React from "react";
 import { observer, inject } from 'mobx-react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { ConfigProvider } from 'antd';
 import zh_CN from 'antd/lib/locale-provider/zh_CN';
-import locales from 'web-bizA-locales';
+import locales from '@webBizALocales/index';
 
-import { authToken } from "web-bizA-hoc";
+import { authToken } from "@webBizAHoc/index";
 
 import Login from './routes/login';
 import Other from "./routes/other";
 import bizLayout from "./routes/layout";
 
+declare const intl: any;
+type props = {
+    langStore: any
+}
+
 @inject("langStore")
 @observer
-export default class App extends React.Component {
+export default class App extends React.Component<props, {}> {
     render() {
         const { langStore } = this.props; 
         intl.init({

@@ -1,14 +1,36 @@
-import React, { Component } from 'react';
+import * as React from 'react'
 import { withRouter } from 'react-router-dom';
-import { Layout, Menu, Icon } from 'antd';
+import { Menu } from 'antd';
 const { SubMenu } = Menu;
-import Constants from 'web-Constants';
+import Constants from 'webConstants';
 const { menuItems } = Constants;
 import { get } from 'lodash';
 
+type props = {
+    history: any
+}
+
+type states = {
+    menuItems: any,
+    rootSubmenuKeys: Array<string>,
+    openKeys: Array<string>,
+    selectedKeys: Array<string>
+}
+
+
+declare global {
+    interface Window {
+        dc: DC;
+    }
+}
+
+interface DC {
+    pg: string
+}
+
 @withRouter
-export default class MenuBar extends Component {
-    constructor(props) {
+export default class MenuBar extends React.Component<props, states> {
+    constructor(props: any) {
         super(props);
         this.state = {
             menuItems,

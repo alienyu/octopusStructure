@@ -21,14 +21,22 @@ var baseConf = {
         new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/)
     ],
     resolve: {
-        extensions: ['.js', '.vue', '.jsx'],
+        extensions: ['.js', '.vue', '.jsx', '.ts', '.tsx'],
         alias: {
             'common-css': process.cwd() + "/common/assets/css/common.less",
-            'common-imgs': process.cwd() + "/common/assets/imgs"
+            '@common-imgs': process.cwd() + "/common/assets/imgs"
         }
     },
     module: {
         rules: [ //加载器，关于各个加载器的参数配置，可自行搜索之。
+            { 
+                test: /\.tsx?$/, 
+                exclude: /node_modules/,
+                use: [
+                    "babel-loader",
+                    "awesome-typescript-loader"
+                ]
+            },
             {
                 test: /\.jsx$/,
                 exclude: /node_modules/,

@@ -1,0 +1,39 @@
+{
+    "compilerOptions": {
+      "outDir": "./dist/",
+      "baseUrl": ".",
+      "paths": {
+        "common-css": ["common/assets/css/common.less"],
+        "@common-imgs/*": ["common/assets/imgs/*"],
+        "@buildConf/*": ["build/config/*"],
+        "@ant-design/icons/lib/dist$": ["biz/common/modules/antdIcons.js"],
+        "@webComponents/*": ["biz/web/page/common/components/*"],
+        "@webMock/*": ["biz/web/page/common/mockData/*"],
+        "@webMobx/*": ["biz/web/page/common/mobx/*"],
+        "@webLocales/*": ["biz/web/page/common/static/locales/*"],
+        "webHeaderCmp": ["biz/web/page/common/components/layout/header.tsx"],
+        "webFooterCmp": ["biz/web/page/common/components/layout/footer.tsx"],
+        "webMenuBarCmp": ["biz/web/page/common/components/layout/menuBar.tsx"],
+        "webConstants": ["biz/web/page/common/static/Constants.ts"],
+        "webAjax": ["biz/web/page/common/static/module/ajax.ts"],
+        "@webBizALocales/*": ["biz/web/page/bizA/locales/*"],
+        "@webBizARoutes/*": ["biz/web/page/bizA/routes/*"],
+        "@webBizAHoc/*": ["biz/web/page/bizA/hoc/*"],
+        "webBizARenderRoutes": ["biz/web/page/bizA/routes.ts"]
+      },
+      "sourceMap": true,
+      "noImplicitAny": false,
+      "module": "commonjs",
+      "target": "es5",
+      "jsx": "react",
+      "skipLibCheck": true,
+      "experimentalDecorators": true,
+      "allowJs": true 
+    },
+    "include": [
+      "./biz/**/*"
+    ],
+    "exclued": [
+      "node_modules"
+    ]
+  }

@@ -42,7 +42,7 @@ function runtime(conf) {
     let pagePath = pageArr.length > 0 ? pageArr.join("/") : ""; //页面路径(pagePathA/pagePathB)
     var entryID = `${platform}/${pagePath}${htmlName}/${htmlName}`; // projectName/platform/pagePath/pageName
     var fileRoute = `${process.cwd()}/biz/${platform}/page/${pagePath}${htmlName}`; //biz/platform/page/pagePath/pageName
-    envConf.entry[entryID] = [`${fileRoute}/${htmlName}.js`]
+    envConf.entry[entryID] = [`${fileRoute}/${htmlName}.tsx`]
     //biz/platform/page/pagePath/pageName.js
     //提取各页面公共模块,并生成splitChunks
     // genSplitChunksConf(getPageVendorConf(conf), conf);

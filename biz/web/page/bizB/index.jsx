@@ -6,7 +6,7 @@ import { ConfigProvider } from 'antd';
 import Layout from './routes/layout';
 import NoLayout from './routes/noLayout';
 import zh_CN from 'antd/lib/locale-provider/zh_CN';
-import locales from 'web-bizB-locales';
+import locales from '@web-bizB-locales';
 
 @inject("langStore")
 @observer

@@ -1,12 +1,20 @@
-import React from "react";
-import { observer, inject } from 'mobx-react';
+import * as React from "react";
+import { observer, inject } from 'mobx-react/index';
 import { withRouter } from 'react-router-dom';
 
-const authToken = (WrappedComponent) => {
+type props = {
+    userStore: any,
+    history: any
+}
+
+const authToken = (WrappedComponent: any) => {
     @inject("userStore")
     @observer
-    @withRouter
-    class CheckAuth extends React.Component {
+    class CheckAuth extends React.Component<props, {}> {
+        constructor(props: any) {
+            super(props);
+        }
+
         componentWillMount() {
             const { userStore, history } = this.props;
             if(!userStore.userInfo.token) {
@@ -21,7 +29,7 @@ const authToken = (WrappedComponent) => {
         }
     }
 
-    return CheckAuth;
+    return withRouter(CheckAuth);
 }
 
 export default authToken;

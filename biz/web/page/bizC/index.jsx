@@ -3,7 +3,7 @@ import { observer, inject } from 'mobx-react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { ConfigProvider } from 'antd';
 import zh_CN from 'antd/lib/locale-provider/zh_CN';
-import locales from 'web-bizC-locales';
+import locales from '@web-bizC-locales';
 
 import renderRoutes from "web-bizC-renderRoutes";
 

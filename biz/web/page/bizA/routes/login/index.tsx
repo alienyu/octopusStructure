@@ -1,15 +1,22 @@
-import React from "react";
-import { Row, Col, Form, Icon, Input, Button, Checkbox } from 'antd';
+import * as React from "react";
+import { Row, Col, Form, Icon, Input, Button } from 'antd';
+import { FormComponentProps } from 'antd/es/form';
 import { observer, inject } from 'mobx-react';
 import { WrapperLoginCmp } from './styled';
 
+declare const webAjax: any;
+declare const intl: any;
+
+interface NormalLoginFormProps extends FormComponentProps {
+    userStore: any,
+    ajaxLoadingStore: any,
+    form: any,
+    history: any
+}
+
 @inject("userStore", "ajaxLoadingStore")
 @observer
-class NormalLoginForm extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-
+class NormalLoginForm extends React.Component<NormalLoginFormProps, {}> {
     handleSubmit = e => {
         e.preventDefault();
         const { userStore } = this.props;
@@ -70,5 +77,5 @@ class NormalLoginForm extends React.Component {
     }
 }
 
-const WrappedNormalLoginForm = Form.create()(NormalLoginForm);
+const WrappedNormalLoginForm = Form.create<NormalLoginFormProps>()(NormalLoginForm);
 export default WrappedNormalLoginForm;

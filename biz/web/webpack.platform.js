@@ -13,20 +13,20 @@ function loadPlatformConf(envConf) {
     platformConf = merge({
         resolve: {
             alias: {
-                'web-components': `${path.resolve(__dirname, 'page/common/components')}`,
-                'web-headerCmp': `${path.resolve(__dirname, 'page/common/components/layout/header.jsx')}`,
-                'web-footerCmp': `${path.resolve(__dirname, 'page/common/components/layout/footer.jsx')}`,
-                'web-menuBarCmp': `${path.resolve(__dirname, 'page/common/components/layout/menuBar.jsx')}`,
-                'web-Constants': `${path.resolve(__dirname, 'page/common/static/Constants.js')}`,
-                'web-ajax': `${path.resolve(__dirname, 'page/common/static/module/ajax.js')}`,
-                'web-mock': `${path.resolve(__dirname, 'page/common/mockData')}`,
-                'web-mobx': `${path.resolve(__dirname, 'page/common/mobx')}`,
-                'web-locales': `${path.resolve(__dirname, 'page/common/static/locales')}`
+                '@webComponents': `${path.resolve(__dirname, 'page/common/components')}`,
+                '@webMock': `${path.resolve(__dirname, 'page/common/mockData')}`,
+                '@webMobx': `${path.resolve(__dirname, 'page/common/mobx')}`,
+                '@webLocales': `${path.resolve(__dirname, 'page/common/static/locales')}`,
+                'webHeaderCmp': `${path.resolve(__dirname, 'page/common/components/layout/header.tsx')}`,
+                'webFooterCmp': `${path.resolve(__dirname, 'page/common/components/layout/footer.tsx')}`,
+                'webMenuBarCmp': `${path.resolve(__dirname, 'page/common/components/layout/menuBar.tsx')}`,
+                'webConstants': `${path.resolve(__dirname, 'page/common/static/Constants.ts')}`,
+                'webAjax': `${path.resolve(__dirname, 'page/common/static/module/ajax.ts')}`
             }
         },
         plugins: [
             new webpack.ProvidePlugin({
-                webAjax: 'web-ajax'
+                webAjax: 'webAjax'
             })
         ]
     }, pageConf);

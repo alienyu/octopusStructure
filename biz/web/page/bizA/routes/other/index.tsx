@@ -1,8 +1,16 @@
-import React from "react";
+import * as React from "react";
 import { Row, Col, Button } from 'antd';
 import { WrapperOtherCmp } from './styled';
 
-export default class Other extends React.Component {
+type props = {
+    history: any
+}
+
+export default class Other extends React.Component<props, {}> {
+    constructor(props: props) {
+        super(props)
+    }
+
     render() {
         return (
             <WrapperOtherCmp>

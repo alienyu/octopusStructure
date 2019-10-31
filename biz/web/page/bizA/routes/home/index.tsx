@@ -1,8 +1,18 @@
-import React from "react";
+import * as React from "react";
 import { Row, Col, Button } from 'antd';
-import { WrapperHomeCmp } from './styled.js';
+import { WrapperHomeCmp } from './styled';
 
-export default class Home extends React.Component {
+declare const intl: any;
+
+type props = {
+    history: any
+}
+
+export default class Home extends React.Component<props> {
+    constructor(props: props) {
+        super(props);
+    }
+
     render() {
         return (
             <WrapperHomeCmp>

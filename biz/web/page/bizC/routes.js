@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, Redirect, Switch } from 'react-router-dom';
-import { authToken, bizLayout } from "web-bizC-hoc";
+import { authToken, bizLayout } from "@web-bizC-hoc";
 
 //Take care about the sequence of redirect config
 const routesConf= [{

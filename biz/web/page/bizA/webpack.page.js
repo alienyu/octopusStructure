@@ -4,14 +4,10 @@ console.log("this is bizA page")
 module.exports = {
     resolve: {
         alias: {
-            'web-bizA-components': `${path.resolve(__dirname, 'components')}`,
-            'web-bizA-mock': `${path.resolve(__dirname, 'mockData')}`,
-            'web-bizA-mobx': `${path.resolve(__dirname, 'mobx')}`,
-            'web-bizA-locales': `${path.resolve(__dirname, 'locales')}`,
-            'web-bizA-routes': `${path.resolve(__dirname, 'routes')}`,
-            'web-bizA-renderRoutes': `${path.resolve(__dirname, 'routes.js')}`,
-            'web-bizA-hoc': `${path.resolve(__dirname, 'hoc')}`
-
+            '@webBizALocales': `${path.resolve(__dirname, 'locales')}`,
+            '@webBizARoutes': `${path.resolve(__dirname, 'routes')}`,
+            '@webBizAHoc': `${path.resolve(__dirname, 'hoc')}`,
+            'webBizARenderRoutes': `${path.resolve(__dirname, 'routes.tsx')}`
         }
     }
 }

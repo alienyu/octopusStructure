@@ -1,4 +1,3 @@
-import React from 'react';
 import { Route, Redirect, Switch } from 'react-router-dom';
 import Loadable from 'react-loadable';
 
@@ -22,10 +21,19 @@ const routesConf= [{
     to: "/login"
 }];
 
-const renderRootRoutes = () => {
-    let routesCmp = [];
-    routesConf.map((route, key) => {
-        let Component = Loadable({
+type routeTypes = {
+    from?: string,
+    to?: string,
+    path?: string,
+    exact?: boolean,
+    layout?: boolean,
+    routes?: any
+}
+
+const renderRootRoutes = ():any => {
+    let routesCmp:Array<JSX.Element> = [];
+    routesConf.map((route: routeTypes, key: number):void => {
+        let Component: any = Loadable({
             loader: () => import(/* webpackChunkName: "web/bizA/chunk/[request]" */  `./routes/${route.path || "home"}`),
             loading:() => {return null}
         })
@@ -36,7 +44,7 @@ const renderRootRoutes = () => {
                 path={`/${route.path}`} 
                 key={key} 
                 exact={route.exact} 
-                render={props => <Component {...props} routes={route.routes} />}
+                render={(props) => <Component {...props} routes={route.routes} />}
             />)
         }
     })
