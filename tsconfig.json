@@ -19,7 +19,7 @@
         "@webBizALocales/*": ["biz/web/page/bizA/locales/*"],
         "@webBizARoutes/*": ["biz/web/page/bizA/routes/*"],
         "@webBizAHoc/*": ["biz/web/page/bizA/hoc/*"],
-        "webBizARenderRoutes": ["biz/web/page/bizA/routes.ts"]
+        "webBizARenderRoutes": ["biz/web/page/bizA/routes.tsx"]
       },
       "sourceMap": true,
       "noImplicitAny": false,

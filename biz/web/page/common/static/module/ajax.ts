@@ -18,7 +18,7 @@ class Ajax {
         if(config.url.match(/^\//)) {config.url = config.url.substr(1, config.url.length)};
         ajaxLoadingStore.changeStatus(true);
         if(mode == "local") {
-            var data = require(`@web-mock/${config.url}.json`);
+            var data = require(`@webMock/${config.url}.json`);
             setTimeout(() => {
                 var consoleData = {
                     requestUrl: config.url,

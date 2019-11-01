@@ -13,7 +13,7 @@ import bizLayout from "./routes/layout";
 
 declare const intl: any;
 type props = {
-    langStore: any
+    langStore?: any
 }
 
 @inject("langStore")

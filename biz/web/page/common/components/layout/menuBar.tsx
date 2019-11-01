@@ -7,7 +7,7 @@ const { menuItems } = Constants;
 import { get } from 'lodash';
 
 type props = {
-    history: any
+    history?: any
 }
 
 type states = {
@@ -28,7 +28,7 @@ interface DC {
     pg: string
 }
 
-@withRouter
+@(withRouter as any)
 export default class MenuBar extends React.Component<props, states> {
     constructor(props: any) {
         super(props);
@@ -93,18 +93,18 @@ export default class MenuBar extends React.Component<props, states> {
                                                 return <SubMenu key={item.key+ '-' + secondItem.key} title={secondItem.name}>
                                                     {
                                                         secondItem.children.map(function(thirdItem) {
-                                                            return <Menu.Item key={item.key+ '-' + secondItem.key + '-' + thirdItem.key} wholeurl={thirdItem.wholeUrl} url={thirdItem.url}>{thirdItem.name}</Menu.Item>
+                                                            return <Menu.Item key={item.key+ '-' + secondItem.key + '-' + thirdItem.key} data-wholeurl={thirdItem.wholeUrl} data-url={thirdItem.url}>{thirdItem.name}</Menu.Item>
                                                         })
                                                     }
                                                 </SubMenu>
                                             } else {
-                                                return <Menu.Item key={item.key+ '-' + secondItem.key} url={secondItem.url} wholeurl={secondItem.wholeUrl}>{secondItem.name}</Menu.Item>
+                                                return <Menu.Item key={item.key+ '-' + secondItem.key} data-url={secondItem.url} data-wholeurl={secondItem.wholeUrl}>{secondItem.name}</Menu.Item>
                                             }
                                         })
                                     }
                                 </SubMenu>
                             } else {
-                                return <Menu.Item key={item.key} url={item.url} wholeurl={item.wholeUrl}>{item.name}</Menu.Item>
+                                return <Menu.Item key={item.key} data-url={item.url} data-wholeurl={item.wholeUrl}>{item.name}</Menu.Item>
                             }
                         })
                     }

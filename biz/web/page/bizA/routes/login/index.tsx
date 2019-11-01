@@ -17,15 +17,15 @@ interface NormalLoginFormProps extends FormComponentProps {
 @inject("userStore", "ajaxLoadingStore")
 @observer
 class NormalLoginForm extends React.Component<NormalLoginFormProps, {}> {
-    handleSubmit = e => {
+    handleSubmit = (e:any) => {
         e.preventDefault();
         const { userStore } = this.props;
-        this.props.form.validateFields((err, values) => {
+        this.props.form.validateFields((err: any, values: any) => {
             if (!err) {
                 webAjax({
                     url: "/login",
                     data: values,
-                    callback(data) {
+                    callback(data: any) {
                         userStore.changeUserInfo(Object.assign(data, values));
                     }
                 })
