@@ -56,10 +56,10 @@ export default class MenuBar extends React.Component<props, states> {
         this.setState({selectedKeys: [e.key]});
         //跨页面跳转
         if(!e.item.props.eventKey.match(window.dc.pg)) {
-            location.href = e.item.props.wholeurl;
+            location.href = e.item.props['data-wholeurl'];
         } else {
             //单页路由跳转
-            this.props.history.push(e.item.props.url);
+            this.props.history.push(e.item.props['data-url']);
         }
     }
 

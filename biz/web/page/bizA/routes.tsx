@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Route, Redirect, Switch } from 'react-router-dom';
-import * as Loadable from 'react-loadable';
+
+declare const Loadable: any;
 
 //Take care about the sequence of redirect config
 const routesConf= [{

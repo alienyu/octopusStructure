@@ -26,7 +26,7 @@ function loadPlatformConf(envConf) {
         },
         plugins: [
             new webpack.ProvidePlugin({
-                webAjax: 'webAjax'
+                webAjax: ['webAjax', 'default']
             })
         ]
     }, pageConf);

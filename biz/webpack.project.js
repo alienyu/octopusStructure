@@ -24,7 +24,8 @@ function loadProjectConf(envConf) {
         },
         plugins: [
             new webpack.ProvidePlugin({
-                intl: 'react-intl-universal'
+                intl: 'react-intl-universal',
+                Loadable: 'react-loadable'
             })
         ]
     }, platformConf);

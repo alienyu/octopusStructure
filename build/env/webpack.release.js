@@ -37,7 +37,7 @@ function runtime(conf) {
     var entryID = `${platform}/${pagePath}${htmlName}/${htmlName}`; // platform/pagePath/pageName
     var fileRoute = `${process.cwd()}/biz/${platform}/page/${pagePath}${htmlName}`; //biz/platform/page/pagePath/pageName
     //将公共模块与页面入口模块合并为一个模块
-    envConf.entry[entryID] = [`${fileRoute}/${htmlName}.js`]
+    envConf.entry[entryID] = [`${fileRoute}/${htmlName}.tsx`]
     envConf.plugins.push(new HtmlWebpackPlugin({
         //根据模板插入css/js等生成最终HTML
         filename: `${platform}/${pagePath}${htmlName}/index.html`,

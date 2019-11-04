@@ -4,6 +4,7 @@ const env = process.env.NODE_ENV;
 const deployContent = !env ? require("../config/devConfig.json")["deployContent"] : require("../config/releaseConfig.json")["deployContent"];
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
+const tsImportPluginFactory = require('ts-import-plugin');
 
 var baseConf = {
     output: {
@@ -29,12 +30,24 @@ var baseConf = {
     },
     module: {
         rules: [ //加载器，关于各个加载器的参数配置，可自行搜索之。
-            { 
-                test: /\.tsx?$/, 
+            {
+                test: /\.tsx?$/,
                 exclude: /node_modules/,
                 use: [
-                    "babel-loader",
-                    "awesome-typescript-loader"
+                    {
+                        loader: "babel-loader",
+                        options: {
+                            cacheDirectory: true
+                        }
+                    },
+                    {
+                        loader: "awesome-typescript-loader",
+                        options: {
+                            getCustomTransformers: () => ({
+                                before: [tsImportPluginFactory({ libraryName: 'antd', style: 'css'})]
+                            }),
+                        }
+                    }
                 ]
             },
             {
@@ -60,7 +73,7 @@ var baseConf = {
                 test: /\.css$/,
                 //配置css的抽取器、加载器。'-loader'可以省去
                 use: [
-                    {loader: MiniCssExtractPlugin.loader},
+                    { loader: MiniCssExtractPlugin.loader },
                     "css-loader"
                 ]
             }, {
@@ -69,7 +82,7 @@ var baseConf = {
                 //根据从右到左的顺序依次调用less、css加载器，前一个的输出是后一个的输入
                 //你也可以开发自己的loader哟。有关loader的写法可自行谷歌之。
                 use: [
-                    {loader: MiniCssExtractPlugin.loader},
+                    { loader: MiniCssExtractPlugin.loader },
                     "css-loader",
                     "less-loader"
                 ]

@@ -1,7 +1,8 @@
 import * as React from "react";
 import { Route, Switch } from "react-router";
 import { Row, Col } from 'antd';
-import * as Loadable from 'react-loadable';
+
+declare const Loadable: any;
 
 interface routesProps {
     path?: string
