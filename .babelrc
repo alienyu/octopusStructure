@@ -8,7 +8,14 @@
     "transform-runtime",
     "transform-object-assign",
     "syntax-dynamic-import",
-    "lodash"
+    "lodash",
+    [
+      "import",
+      {
+        //remove 'libraryDirectory' param and set to 'css' and you can import antd-css by your specific requirements.
+        "libraryName": "antd",
+        "style": "css" 
+    }]
   ],
 "comments": true
 }

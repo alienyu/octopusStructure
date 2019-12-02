@@ -26,10 +26,12 @@ getTSPaths = (alias) => {
     return tsPaths;
 }
 
+
 rewriteTSConfig = (config) => {
     fs.writeFileSync(`${process.cwd()}/tsconfig.json`, JSON.stringify(config));
 }
 
 genTSConf(envConf.resolve.alias);
 
+console.log(envConf)
 module.exports = envConf;

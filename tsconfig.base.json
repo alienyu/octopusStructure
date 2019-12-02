@@ -11,10 +11,10 @@
       "moduleResolution": "node",
       "skipLibCheck": true,
       "experimentalDecorators": true,
-      "allowJs": true
+      "allowJs": true,
+      "allowSyntheticDefaultImports": true
     },
     "include": [
-      "./biz/**/*"
     ],
     "exclued": [
       "node_modules"

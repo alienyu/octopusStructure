@@ -2,9 +2,9 @@ import React from "react";
 import { Route, Switch } from 'react-router-dom';
 import { Row, Col, Layout, LocaleProvider } from 'antd';
 const { Header, Footer, Sider, Content } = Layout;
-import WebHeader from 'web-headerCmp';
-import WebMenuBar from 'web-menuBarCmp';
-import WebFooter from 'web-footerCmp';
+import WebHeader from 'webHeaderCmp';
+import WebMenuBar from 'webMenuBarCmp';
+import WebFooter from 'webFooterCmp';
 import Home from '../home';
 import Login from '../login';
 
