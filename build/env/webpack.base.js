@@ -12,6 +12,10 @@ var baseConf = {
         chunkFilename: '[name].[chunkhash].js'   //chunk生成的配置
     },
     plugins: [
+        new webpack.ProvidePlugin({
+            'intl': 'react-intl-universal',
+            'Loadable': 'react-loadable'
+        }),
         new MiniCssExtractPlugin('[name].css'), //单独使用link标签加载css并设置路径，相对于output配置中的publicePath
         //按需加载lodash
         new LodashModuleReplacementPlugin({
