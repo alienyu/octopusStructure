@@ -5,13 +5,16 @@ import { authToken, bizLayout } from "@web-bizC-hoc";
 //Take care about the sequence of redirect config
 const routesConf= [{
     path: "home",
-    layout: true,
-    auth: true
+    layout: true
 },{
     path: 'login',
     layout: true
 },{
-    path: "other",
+    path: "layoutPage",
+    layout: true,
+    auth: true
+},{
+    path: "noLayoutPage",
     auth: true
 },{
     path: "subRouter",
@@ -29,9 +32,18 @@ const routesConf= [{
     to: "/home"
 }];
 
-const renderRootRoutes = () => {
-    let routesCmp = [];
-    routesConf.map((route, key) => {
+type routeTypes = {
+    from?: string,
+    to?: string,
+    path?: string,
+    exact?: boolean,
+    layout?: boolean,
+    routes?: any
+}
+
+const renderRootRoutes = ():any => {
+    let routesCmp:Array<JSX.Element> = [];
+    routesConf.map((route:routeTypes, key:number) => {
         if (route.from) {
             routesCmp.push(<Redirect from={route.from} to={route.to} key={key} />);
         } else {
