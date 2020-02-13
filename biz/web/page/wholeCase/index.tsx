@@ -6,13 +6,17 @@ import zh_CN from 'antd/lib/locale-provider/zh_CN';
 import locales from '@webWholeCaseLocales';
 import renderRoutes from "webWholeCaseRenderRoutes";
 
-type props = {
+type AppProps = {
     langStore?: any
 }
 
 @inject("langStore")
 @observer
-export default class App extends React.Component {
+export default class App extends React.Component<AppProps, {}> {
+    constructor(props:AppProps) {
+        super(props);
+    }
+
     render() {
         const { langStore } = this.props;
         intl.init({
