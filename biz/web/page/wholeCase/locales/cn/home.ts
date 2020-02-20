@@ -1,3 +1,3 @@
 export default {
-    'content': "这是bizA的首页"
+    'content': "这是wholeCase的首页"
 }

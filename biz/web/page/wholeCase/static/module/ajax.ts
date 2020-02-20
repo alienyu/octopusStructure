@@ -5,7 +5,7 @@ import Axios from 'axios';
 const env = process.env.NODE_ENV;
 const perConf = env == "production" ? require(`@buildConf/releaseConfig.json`) : require(`@buildConf/devConfig.json`);
 const mode = perConf.mode;
-const { host, apiList } = constants.ajax;
+const { host, apiList } = Constants.ajax;
 
 class Ajax {
     ajax(ops: any): any {

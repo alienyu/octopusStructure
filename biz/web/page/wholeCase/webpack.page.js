@@ -5,6 +5,7 @@ module.exports = {
         alias: {
             '@webWholeCaseMobx': `${path.resolve(__dirname, 'mobx')}`,
             '@webWholeCaseLocales': `${path.resolve(__dirname, 'locales')}`,
+            '@webWholeCaseHoc': `${path.resolve(__dirname, 'hoc')}`,
             'webWholeCaseGlobalConf': `${path.resolve(__dirname, 'static/global/index.ts')}`,
             'webWholeCaseRenderRoutes': `${path.resolve(__dirname, 'routes')}`,
             'webWholeCaseAjax': `${path.resolve(__dirname, 'static/module/ajax.ts')}`,
@@ -13,7 +14,8 @@ module.exports = {
     },
     plugins: [
         new webpack.ProvidePlugin({
-            Constants: ['webWholeCaseConstants', 'default']
+            Constants: ['webWholeCaseConstants', 'default'],
+            ajax: ['webWholeCaseAjax', 'default']
         })
     ]
 }

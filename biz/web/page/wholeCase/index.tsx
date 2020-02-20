@@ -3,8 +3,10 @@ import { observer, inject } from 'mobx-react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { ConfigProvider } from 'antd';
 import zh_CN from 'antd/lib/locale-provider/zh_CN';
-import locales from '@webWholeCaseLocales';
+import locales from '@webWholeCaseLocales/index';
 import renderRoutes from "webWholeCaseRenderRoutes";
+import { loadGlobalVar } from 'webWholeCaseGlobalConf';
+loadGlobalVar();
 
 type AppProps = {
     langStore?: any

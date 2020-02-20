@@ -4,7 +4,7 @@ declare global {
     }
     const common: any;
     const intl: any;
-    const constants: any;
+    const Constants: any;
     const mockGen: any;
     const ajax: any;
     const Loadable: any;

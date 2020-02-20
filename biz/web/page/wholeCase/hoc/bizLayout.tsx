@@ -1,9 +1,9 @@
 import React from "react";
 import { Layout } from 'antd';
 const { Header, Footer, Sider, Content } = Layout;
-import WebHeader from 'web-headerCmp';
-import WebMenuBar from 'web-menuBarCmp';
-import WebFooter from 'web-footerCmp';
+import WebHeader from 'webHeaderCmp';
+import WebMenuBar from 'webMenuBarCmp';
+import WebFooter from 'webFooterCmp';
 
 const bizLayout = (WrappedComponent) => {
     return (props) => {

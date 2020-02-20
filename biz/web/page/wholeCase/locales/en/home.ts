@@ -1,3 +1,3 @@
 export default {
-    'content': "This is home page of bizA"
+    'content': "This is home page of wholeCase"
 }
