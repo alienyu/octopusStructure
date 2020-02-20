@@ -8,7 +8,7 @@ export default class NoLayoutPage extends React.Component<{}, {}> {
 
     render() {
         return (
-            <Other />
+            <Other type="0"/>
         );
     }
 }

@@ -8,7 +8,7 @@ export default class LayoutPage extends React.Component<{}, {}> {
 
     render() {
         return (
-            <Other />
+            <Other type="1" />
         );
     }
 }

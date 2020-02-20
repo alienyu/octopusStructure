@@ -4,9 +4,6 @@ import { authToken, bizLayout } from "@webWholeCaseHoc/index";
 
 //Take care about the sequence of redirect config
 const routesConf= [{
-    path: "",
-    exact: true
-},{
     path: "home",
     layout: true
 },{
@@ -30,6 +27,9 @@ const routesConf= [{
 },{
     from: "/reg",
     to: "/login"
+},{
+    from: "/",
+    to: "/home"
 }];
 
 type routeTypes = {
@@ -60,7 +60,7 @@ const renderRootRoutes = ():any => {
 
 const renderRouteCmp = (routeCfg, props) => {
     let Component: any = Loadable({
-        loader: () => import(/* webpackChunkName: "web/wholeCase/chunk/[request]" */  `./routes/${routeCfg.path || "home"}`),
+        loader: () => import(/* webpackChunkName: "web/wholeCase/chunk/[request]" */  `./routes/${routeCfg.path}`),
         loading:() => {return null}
     })
     //TODO: we need use compose plugin
