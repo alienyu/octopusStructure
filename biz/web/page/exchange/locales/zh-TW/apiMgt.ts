@@ -1,0 +1,37 @@
+export default{
+    'apiMgt':'API管理',
+    'createApi':'创建API',
+    'apiTitleExplain':'创建API密钥可让第三方网站或应用访问HashkeyPro平台的市场或进行实时交易',
+    'lookApiData':'查看API资料',
+    'addApiTag':'给API密钥一个好记的标签',
+    'create':'创建',
+    'createNow':'立即创建',
+    'apiList':'API列表',
+    'deleteAllApi':'删除所有API',
+    'editPermission':'编辑权限',
+    'delete':"删除",
+    'confirm':"确认",
+    'cancel':"取消",
+    'cipher':'密钥',
+    'cipherExplain':'为了您的安全，您的API密钥仅会在创建时出现一次，如果您丢失了密钥，则需要您删除API且重新创建一个新的密钥',
+    'apiPermission':'API权限',
+    'onlyRead':'只读',
+    'permittedTransaction':'允许交易',
+    'allowWithdrawals':'允许提现',
+    'ipAddressPermission':'IP地址权限',
+    'noPermission':'无限制（缺乏安全）',
+    'allowAll':'这个API密钥允许任何地址访问，不推荐',
+    'openWithdrawals':'开启提现选项必须选中【限制只对受信任IP访问】',
+    'restrictIPAccess':'限制只对受信任ip的访问(推荐)',
+    'recordKey':'记录API密钥',
+    'apikey':"API密钥",
+    'copykey':'复制密钥',
+    'continueCreateApi':'继续创建API',
+    'rememberApi':'我已妥善保存密钥',
+    'addIP':'添加可信IP',
+    'deleteModal':{
+        'title':'确认要删除该API?',
+        'titleAll':'确认要删除所有API?'
+    }
+    
+}

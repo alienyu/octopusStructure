@@ -1,0 +1,52 @@
+export default {
+    'openOrders': '当前委托',
+    'orderHistory': '历史委托',
+    'tradeHistory': '历史成交',
+    'portfolio': '资产',
+    'cancelOrder': '撤单成功',
+    'cancelAll': '全部取消',
+    'hide': '隐藏其他资产',
+    'hideProduct': '隐藏其他产品',
+    'all': '全部',
+    'limit': '限价',
+    'market': '市价',
+    'table': {
+        'date': '时间',
+        'pair': '产品',
+        'type': '类型',
+        'side': '方向',
+        'price': '价格',
+        'price2': '委托价格',
+        'amount': '数量',
+        'amount2': '委托数量',
+        'filled': '完成度',
+        'total': '委托金额',
+        'volume': '成交额',
+        'triggerPrice': '触发价',
+        'amountDisplay': '显示数量',
+        'expirationDate': '有效期',
+        'cancel': '取消',
+        'average': '成交均价',
+        'status': '状态',
+        'tradeStatus': '状态',
+        'coin': '资产',
+        'balance': '总额',
+        'available': '可用资产',
+        'inOrder': '下单冻结',
+        'usdtValue': 'USDT估值',
+        'fee': '手续费',
+        'averagePrice': '平均价格',
+        'volumeTraded': '成交数量'
+    },
+    'tradeHistoryTable': {
+        'price': '成交均价',
+        'amount': '成交数量',
+        'total': '成交额'
+    },
+    'modal': {
+        'yes': '是',
+        'no': '否',
+        'cancel': '是否确定撤销该订单',
+        'cancelAll': '是否确定撤销全部订单'
+    }
+}

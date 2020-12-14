@@ -1,0 +1,14 @@
+export default {
+    "four": "FOUR",
+    "title": 'PoW Algorithm',
+    "part": {
+        "content_1": "There are many different nodes in the distributed system, these nodes may be online and offline, the communication between the nodes will be delayed, and even some nodes will be evil. Therefore, the consistency problem between nodes must be solved in the design process. The consensus algorithm is the basis of all blockchain technologies and is used to solve the process of reaching consensus among all nodes.",
+        "content_2":  "At present, the main consensus algorithms include PoW and PoS.",
+        "title_1": "4.1 PoW Algorithm",
+        "content_3": "PoW is a Proof of Work. By evaluating the workload to gain the right to keep accounts, the more workload, the more likely it is to get this accounting opportunity. As a reward, the bookkeeper will also get a certain amount of coins . The advantage of the POW mechanism is that the degree of decentralization is high, and everyone can participate in obtaining accounting rights. At the same time, the higher the computing power of the entire network, the higher the degree of security, and the higher the cost of investment to destroy the system. The disadvantage of the POW mechanism is that the efficiency is relatively low and the energy consumption is very high, because each transaction needs to be confirmed by multiple miners, and a large amount of power is consumed during the operation of the node. The projects applying PoW consensus algorithm mainly include BTC, ETH and LTC.",
+        "title_2": "4.2 PoS Algorithm",
+        "content_4": "PoS is a Proof of Stake. In order to make up for the huge energy consumption problem of proof of work, PoS decides to obtain the accounting right based on the number of coins held in the hand. There is no need to consume power to perform calculations, but to obtain the right to package blocks by mortgage token. When a transaction occurs, the system will reward the nodes of the package block and the verification block. Token. The advantage of the POS mechanism is that it does not require mining power, and will not waste energy. At the same time, the time for consensus is shortened, and the transfer efficiency is improved. The shortcomings of the PoS mechanism are also very obvious. The first is the degree of decentralization, which is prone to the situation of the strong and constant. Large currency holders hold money to generate interest, resulting in monopoly problems. Another point is the degree of security. The PoS mechanism is more complicated to implement and is prone to security vulnerabilities. The projects applying PoS consensus algorithm mainly include COSMOS and Cardano. "
+       
+    }
+
+}

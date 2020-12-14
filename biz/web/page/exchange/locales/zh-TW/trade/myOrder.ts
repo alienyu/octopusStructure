@@ -1,0 +1,41 @@
+export default {
+    'openOrders': 'Open Orders',
+    'orderHistory': 'Order History',
+    'tradeHistory': 'Trade History',
+    'portfolio': 'Portfolio',
+    'cancelOrder': '撤单成功',
+    'cancelAll': 'Cancel All',
+    'hide': 'Hide Other Products',
+    'all': 'All',
+    'limit': 'Limit',
+    'market': 'Market',
+    'table': {
+        'date': 'Date',
+        'pair': 'Product',
+        'type': 'Type',
+        'side': 'Side',
+        'price': 'Price',
+        'amount': 'Amount',
+        'filled': 'Filled%',
+        'total': 'Total',
+        'volume': 'Total',
+        'triggerPrice': 'Trigger Price',
+        'amountDisplay': 'Amount Display',
+        'expirationDate': 'Expiration Date',
+        'cancel': 'Cancel',
+        'average': 'Average',
+        'status': 'Status',
+        'coin': 'Coin',
+        'balance': 'Balance',
+        'available': 'Available',
+        'inOrder': 'In Order',
+        'usdtValue': 'USDT value',
+        'fee': 'Fee'
+    },
+    'modal': {
+        'yes': '是',
+        'no': '否',
+        'cancel': '是否确定撤销该订单',
+        'cancelAll': '是否确定撤销全部订单'
+    }
+}

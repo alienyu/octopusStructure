@@ -1,0 +1,32 @@
+export default{
+    "title":"Transfer",
+    "tab1":"Crypto",
+    "tab2":"Fiat",
+    "from":"From",
+    "to":"To",
+    "currency":"Asset",
+    "amount":"Amount",
+    "all":"All",
+    "placeholder":"Please enter the amount",
+    "available":"Available",
+    "sure":"Confirm",
+    "cancel":"Cancel",
+    "success":"Successfully",
+    "manage":"Master Account",
+    "trade":"Sub-account",
+    "account":"Account No.:",
+    "pwd":"Fund Password",
+    "forgotPwd":"Forgot Password?",
+    'confirm':{
+        'title':'Please confirm your transfer request',
+        'tip':'The transfer request can NOT be cancelled once it be confirmed on chain.',
+        'detail':'Details',
+        'cancel':'Cancel',
+        "sure":'Confirm'
+    },
+    "tip1":"The withdrawal amount must be greater than 0",
+    "tip2":"Insufficient balance or fees",
+    "tip3":"The transfer amount can't be blank",
+    "tip4":"Can't be the same account",
+    "noAccess":"You have no permission to transfer"
+}
